@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Sayed | Premium Community Manager & Performance Marketer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#080c14',
+                            card: '#0f172a',
+                            border: '#1e293b',
+                            gold: '#fbbf24',
+                            goldHover: '#d97706',
+                            emerald: '#10b981',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .custom-glow {
+            box-shadow: 0 0 25px -5px rgba(251, 191, 38, 0.15);
+        }
+        .text-glow {
+            text-shadow: 0 0 12px rgba(251, 191, 38, 0.3);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-slate-100 min-height-screen font-sans antialiased overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-brand-dark/95 backdrop-blur-md border-b border-brand-border px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full border border-brand-gold flex items-center justify-center font-bold text-brand-gold text-xl text-glow">
+                    M
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-extrabold tracking-wider text-brand-gold text-lg" data-key="nav-name">محمد سيد مصطفى</span>
+                    <span class="text-xs text-slate-400 font-medium" data-key="nav-title">خبير نمو وإدارة مجتمعات</span>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8 font-semibold text-sm">
+                <a href="#about" class="hover:text-brand-gold transition-colors" data-key="nav-link-about">من أنا</a>
+                <a href="#stats" class="hover:text-brand-gold transition-colors" data-key="nav-link-stats">الأرقام القياسية</a>
+                <a href="#portfolio" class="hover:text-brand-gold transition-colors" data-key="nav-link-portfolio">معرض الأداء</a>
+                <a href="#experience" class="hover:text-brand-gold transition-colors" data-key="nav-link-exp">الخبرات المهنية</a>
+                <a href="#skills" class="hover:text-brand-gold transition-colors" data-key="nav-link-skills">المهارات</a>
+                <a href="#contact" class="hover:text-brand-gold transition-colors" data-key="nav-link-contact">تواصل معي</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button onclick="toggleLanguage()" class="border border-brand-border bg-brand-card/50 hover:bg-brand-border hover:text-brand-gold transition-all rounded-lg px-4 py-1.5 text-xs font-bold flex items-center gap-2">
+                    <i class="fa-solid fa-language text-sm"></i>
+                    <span id="lang-btn-text">English</span>
+                </button>
+                <a href="#contact" class="hidden sm:inline-block bg-gradient-to-r from-brand-gold to-brand-goldHover text-brand-dark font-extrabold text-xs px-5 py-2.5 rounded-lg hover:shadow-lg hover:shadow-brand-gold/20 transition-all" data-key="nav-btn">وظفني الآن</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="about" class="relative py-20 px-6 overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(251,191,36,0.03),transparent_50%)] pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+            
+            <!-- Left Text Content -->
+            <div class="lg:col-span-7 flex flex-col gap-6 text-center lg:text-right" id="hero-text-container">
+                <div class="inline-flex items-center gap-2 bg-brand-card border border-brand-border rounded-full px-4 py-2 w-max mx-auto lg:mr-0 lg:ml-auto">
+                    <span class="w-2.5 h-2.5 rounded-full bg-brand-emerald animate-pulse"></span>
+                    <span class="text-xs font-bold text-slate-300" data-key="hero-badge">متاح للمشاريع والفرص الكبرى</span>
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                    <span class="text-white" data-key="hero-title-1">أنا</span> 
+                    <span class="bg-gradient-to-r from-brand-gold to-brand-goldHover bg-clip-text text-transparent" data-key="hero-title-2">محمد سيد مصطفى</span><br>
+                    <span class="text-2xl sm:text-3xl text-slate-300 mt-2 block font-semibold" data-key="hero-subtitle">مسؤول نمو وإدارة مجتمعات تفاعلية (Growth & Community Manager)</span>
+                </h1>
+                <p class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mr-0" data-key="hero-desc">
+                    أكثر من 15 عاماً من الخبرة الرقمية في قيادة استراتيجيات التواصل وإطلاق الحملات التسويقية التحويلية فائقة النجاح. توليت إدارة وتنشيط مجتمعات تفاعلية لأكبر الكيانات الصحفية والإعلامية في مصر مثل اليوم السابع والمصري اليوم، مع بناء ماكينات مبيعات رقمية (Performance Funnels) تحقق أعلى عوائد صرف ممكنة بتكلفة استحواذ استثنائية.
+                </p>
+                <div class="flex flex-wrap gap-4 justify-center lg:justify-start mt-4">
+                    <a href="#portfolio" class="bg-gradient-to-r from-brand-gold to-brand-goldHover text-brand-dark font-extrabold px-8 py-3.5 rounded-lg hover:shadow-lg hover:shadow-brand-gold/20 transition-all flex items-center gap-2" data-key="hero-btn-portfolio">
+                        <i class="fa-solid fa-chart-line"></i> رؤية مؤشرات الأداء
+                    </a>
+                    <a href="#contact" class="bg-brand-card hover:bg-brand-border border border-brand-border text-white font-bold px-8 py-3.5 rounded-lg transition-all flex items-center gap-2" data-key="hero-btn-contact">
+                        <i class="fa-solid fa-envelope"></i> تواصل مباشر
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Profile Image Card -->
+            <div class="lg:col-span-5 flex justify-center">
+                <div class="relative w-72 h-96 sm:w-80 sm:h-[420px]">
+                    <!-- Border glow effect -->
+                    <div class="absolute inset-0 bg-gradient-to-b from-brand-gold to-transparent rounded-2xl opacity-25 blur-lg pointer-events-none"></div>
+                    <!-- Styled Card Frame -->
+                    <div class="absolute inset-0 bg-brand-card border border-brand-border rounded-2xl overflow-hidden p-3 custom-glow">
+                        <img src="f124f1d4-baaf-4428-a84a-016a791ba110.jpg" alt="Mohamed Sayed profile image" class="w-full h-full object-cover object-center rounded-xl grayscale hover:grayscale-0 transition-all duration-500">
+                    </div>
+                    <!-- Badges overlay -->
+                    <div class="absolute -bottom-5 -right-5 bg-brand-card border border-brand-border p-4 rounded-xl shadow-2xl flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-lg bg-brand-gold/10 flex items-center justify-center text-brand-gold text-2xl">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-xs text-slate-400" data-key="badge-experience-title">الخبرة المهنية</span>
+                            <span class="text-lg font-bold text-white" data-key="badge-experience-val">+15 عاماً</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Stats Section -->
+    <section id="stats" class="py-16 bg-brand-card border-y border-brand-border relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-center text-xs font-bold tracking-widest text-brand-gold uppercase mb-10" data-key="section-stats-tag">عينة من قوة الأداء وحجم العمل الفعلي</h2>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Stat 1 -->
+                <div class="flex flex-col items-center text-center p-6 bg-brand-dark/40 border border-brand-border rounded-xl">
+                    <span class="text-brand-gold text-4xl lg:text-5xl font-extrabold tracking-tight mb-2">2.4M+</span>
+                    <span class="text-xs text-slate-400 font-semibold" data-key="stat-reach">إجمالي الوصول للعملاء (Reach)</span>
+                </div>
+                <!-- Stat 2 -->
+                <div class="flex flex-col items-center text-center p-6 bg-brand-dark/40 border border-brand-border rounded-xl">
+                    <span class="text-brand-gold text-4xl lg:text-5xl font-extrabold tracking-tight mb-2">7.3M+</span>
+                    <span class="text-xs text-slate-400 font-semibold" data-key="stat-impressions">الظهور الإعلاني التراكمي (Impressions)</span>
+                </div>
+                <!-- Stat 3 -->
+                <div class="flex flex-col items-center text-center p-6 bg-brand-dark/40 border border-brand-border rounded-xl">
+                    <span class="text-brand-gold text-4xl lg:text-5xl font-extrabold tracking-tight mb-2">1.14 <span class="text-xs">ج.م</span></span>
+                    <span class="text-xs text-slate-400 font-semibold" data-key="stat-cpa">تكلفة المحادثة (CPA)</span>
+                </div>
+                <!-- Stat 4 -->
+                <div class="flex flex-col items-center text-center p-6 bg-brand-dark/40 border border-brand-border rounded-xl">
+                    <span class="text-brand-gold text-4xl lg:text-5xl font-extrabold tracking-tight mb-2">55%</span>
+                    <span class="text-xs text-slate-400 font-semibold" data-key="stat-hook">متوسط جذب الانتباه بالفيديو (Hook Rate)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies / Proof Section -->
+    <section id="portfolio" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16 flex flex-col gap-4">
+            <h2 class="text-brand-gold text-sm font-extrabold uppercase tracking-wider" data-key="portfolio-tag">مستندات كفاءة الحساب الإعلاني</h2>
+            <h3 class="text-3xl sm:text-4xl font-extrabold" data-key="portfolio-title">إثبات الأداء بالأرقام واللقطات الحية</h3>
+            <p class="text-slate-400 text-sm sm:text-base" data-key="portfolio-desc">
+                لا نعتمد على الآراء، بل نتحرك بقوة البيانات. إليك لقطات حية موثقة من داخل لوحة التحكم الإعلانية تظهر هندسة الاستهداف وإدارتي الفعالة لميزانيات الحملات الرقمية:
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-brand-card border border-brand-border rounded-xl overflow-hidden hover:border-brand-gold/50 transition-all duration-300 group">
+                <div class="h-64 overflow-hidden relative bg-brand-dark flex items-center justify-center p-4">
+                    <img src="54083f14-5f00-4996-8f91-9cb1691a58e8.jpg" alt="Meta Ads Manager total performance spend" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 rounded-lg">
+                    <div class="absolute inset-0 bg-brand-dark/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 cursor-pointer" onclick="openLightbox('54083f14-5f00-4996-8f91-9cb1691a58e8.jpg')">
+                        <span class="bg-brand-gold text-brand-dark font-extrabold text-xs px-4 py-2 rounded-lg flex items-center gap-2"><i class="fa-solid fa-magnifying-glass-plus"></i> تكبير الصورة</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-xs bg-brand-gold/10 text-brand-gold font-bold px-3 py-1 rounded-full border border-brand-gold/20" data-key="port-c1-tag">إحصائيات إجمالية</span>
+                        <span class="text-xs text-slate-400 font-semibold" data-key="port-c1-file">ملف: 54083f14-5f00-4996-8f91-9cb1691a58e8.jpg</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2" data-key="port-c1-title">لوحة أداء المليون والوصول الموحد</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed" data-key="port-c1-desc">إظهار كفاءة التوصيل والانتشار الكلي بنسبة تكرار مضبوطة بدقة عند 2.95، بمجموع إنفاق تجاوز 276 ألف جنيه ومعدلات ظهور تخطت الـ 7 ملايين مرة.</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-brand-card border border-brand-border rounded-xl overflow-hidden hover:border-brand-gold/50 transition-all duration-300 group">
+                <div class="h-64 overflow-hidden relative bg-brand-dark flex items-center justify-center p-4">
+                    <img src="96ce7c82-dc26-45e9-868d-9eef3af4b927.jpg" alt="Video performance post engagement hook rate" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 rounded-lg">
+                    <div class="absolute inset-0 bg-brand-dark/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 cursor-pointer" onclick="openLightbox('96ce7c82-dc26-45e9-868d-9eef3af4b927.jpg')">
+                        <span class="bg-brand-gold text-brand-dark font-extrabold text-xs px-4 py-2 rounded-lg flex items-center gap-2"><i class="fa-solid fa-magnifying-glass-plus"></i> تكبير الصورة</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-xs bg-brand-emerald/10 text-brand-emerald font-bold px-3 py-1 rounded-full border border-brand-emerald/20" data-key="port-c2-tag">كفاءة الفيديو</span>
+                        <span class="text-xs text-slate-400 font-semibold" data-key="port-c2-file">ملف: 96ce7c82-dc26-45e9-868d-9eef3af4b927.jpg</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2" data-key="port-c2-title">مقياس التفاعل والـ Hook Rate الأسطوري</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed" data-key="port-c2-desc">تحقيق تفاعل مذهل بمتوسط سعر 0.01 ج.م للتفاعل الواحد، مع خطف انتباه فوري للمستخدمين (Hook Rate 55%) لأول خمس ثوان حاسمة في تجربة المشاهدة.</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-brand-card border border-brand-border rounded-xl overflow-hidden hover:border-brand-gold/50 transition-all duration-300 group">
+                <div class="h-64 overflow-hidden relative bg-brand-dark flex items-center justify-center p-4">
+                    <img src="bc1f1414-72e1-4306-bbd6-b5d23991b278.jpg" alt="Messaging conversation CPA metrics" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 rounded-lg">
+                    <div class="absolute inset-0 bg-brand-dark/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 cursor-pointer" onclick="openLightbox('bc1f1414-72e1-4306-bbd6-b5d23991b278.jpg')">
+                        <span class="bg-brand-gold text-brand-dark font-extrabold text-xs px-4 py-2 rounded-lg flex items-center gap-2"><i class="fa-solid fa-magnifying-glass-plus"></i> تكبير الصورة</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-xs bg-brand-gold/10 text-brand-gold font-bold px-3 py-1 rounded-full border border-brand-gold/20" data-key="port-c3-tag">تحويل المبيعات (B2C)</span>
+                        <span class="text-xs text-slate-400 font-semibold" data-key="port-c3-file">ملف: bc1f1414-72e1-4306-bbd6-b5d23991b278.jpg</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2" data-key="port-c3-title">بدء المحادثات الشرائية بتكلفة متدنية جداً</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed" data-key="port-c3-desc">بناء أداء تحويلي فائق الجودة مكننا من حصد 1,170 رسالة شراء حقيقية في فترة زمنية قصيرة بمتوسط تكلفة رسالة لا يتخطى الـ 1.14 ج.م فقط.</p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-brand-card border border-brand-border rounded-xl overflow-hidden hover:border-brand-gold/50 transition-all duration-300 group">
+                <div class="h-64 overflow-hidden relative bg-brand-dark flex items-center justify-center p-4">
+                    <img src="dce152a1-4d70-40bd-acb3-8fb907461d7f.jpg" alt="Precision ad set layering budgets" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 rounded-lg">
+                    <div class="absolute inset-0 bg-brand-dark/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 cursor-pointer" onclick="openLightbox('dce152a1-4d70-40bd-acb3-8fb907461d7f.jpg')">
+                        <span class="bg-brand-gold text-brand-dark font-extrabold text-xs px-4 py-2 rounded-lg flex items-center gap-2"><i class="fa-solid fa-magnifying-glass-plus"></i> تكبير الصورة</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-xs bg-brand-emerald/10 text-brand-emerald font-bold px-3 py-1 rounded-full border border-brand-emerald/20" data-key="port-c4-tag">هندسة الطببات والمجموعات</span>
+                        <span class="text-xs text-slate-400 font-semibold" data-key="port-c4-file">ملف: dce152a1-4d70-40bd-acb3-8fb907461d7f.jpg</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-white mb-2" data-key="port-c4-title">توزيع ميزانيات الاستهداف المتوازن والـ Layering</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed" data-key="port-c4-desc">المرونة في تقسيم البادجيت اليومي بين مجموعات مخصصة تضمن حصد رسائل بمتوسط 1.48 ج.م و 1.62 ج.م بحدود استثمارية مرنة وآمنة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Timeline -->
+    <section id="experience" class="py-24 bg-brand-card/30 border-y border-brand-border">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-16 flex flex-col gap-3">
+                <h2 class="text-brand-gold text-xs font-bold uppercase tracking-wider" data-key="exp-tag">تطور المسيرة الإستراتيجية</h2>
+                <h3 class="text-3xl font-extrabold" data-key="exp-title">الخبرات المهنية والمؤسسية</h3>
+            </div>
+
+            <!-- Timeline -->
+            <div class="relative border-r border-brand-border mr-4 lg:mr-0 flex flex-col gap-12" id="experience-timeline">
+                
+                <!-- Job 1 -->
+                <div class="relative pr-8">
+                    <!-- Bullet dot -->
+                    <div class="absolute -right-[9px] top-1.5 w-4.5 h-4.5 rounded-full bg-brand-dark border-2 border-brand-gold"></div>
+                    <span class="text-xs font-extrabold text-brand-gold uppercase tracking-wider">2016 — الحاضر</span>
+                    <h4 class="text-xl font-bold text-white mt-1" data-key="exp1-role">مدير مجتمعات تسويقية ورقمية (Community Manager)</h4>
+                    <span class="text-sm font-semibold text-slate-400 block" data-key="exp1-company">جريدة ومؤسسة اليوم السابع (Al youm7, eg)</span>
+                    <ul class="text-xs text-slate-400 mt-3 list-disc pr-4 space-y-2 leading-relaxed">
+                        <li data-key="exp1-l1">تحليل كامل لأداء جميع المنصات الإعلانية والبرامج التسويقية لتحديد الثغرات وفرص التحسين لرفع معدلات الـ CRO.</li>
+                        <li data-key="exp1-l2">إدارة وتنشيط تجمعات مستخدمي الهوية الرقمية للجريدة وتوجيه مسارات النشر للمحتوى الفيروسي الساخن والموثوق.</li>
+                        <li data-key="exp1-l3">تنمية وتعزيز ظهور البراند العام عبر تحسين محركات البحث التنافسية (SEO Optimization) والتصاميم الراقية الجاذبة.</li>
+                        <li data-key="exp1-l4">إعداد تقارير وتحليلات ربع سنوية وشهرية لتوزيع ميزانيات الإعلان بكفاءة وضمان تحقيق الأهداف البيعية المرسومة.</li>
+                    </ul>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="relative pr-8">
+                    <!-- Bullet dot -->
+                    <div class="absolute -right-[9px] top-1.5 w-4.5 h-4.5 rounded-full bg-brand-dark border-2 border-brand-border"></div>
+                    <span class="text-xs font-extrabold text-brand-gold uppercase tracking-wider">2013 — 2015</span>
+                    <h4 class="text-xl font-bold text-white mt-1" data-key="exp2-role">مساعد مدير المجتمعات الرقمية (Community Assistant Manager)</h4>
+                    <span class="text-sm font-semibold text-slate-400 block" data-key="exp2-company">جريدة ومؤسسة المصري اليوم (Almasry alyoum newspaper, eg)</span>
+                    <ul class="text-xs text-slate-400 mt-3 list-disc pr-4 space-y-2 leading-relaxed">
+                        <li data-key="exp2-l1">تحليل واستكشاف وتطوير الاستراتيجيات التسويقية الفعالة من واقع دراسة أهداف الجريدة وأحوال السوق المحلية والجمهور.</li>
+                        <li data-key="exp2-l2">إدارة تدفق وسير عمل صناعة ونشر الكونتنت، بالتنسيق مع الجهات القانونية والتحريرية والمراجعين الداخليين.</li>
+                        <li data-key="exp2-l3">مراقبة وقياس مدى تفاعل الجماهير عبر صفحات السوشيال ميديا ووضع معايير القياس لتقليل تكلفة الوصول والاستحواذ.</li>
+                        <li data-key="exp2-l4">تقديم خدمة عملاء ودعم استثنائي وسريع لأعضاء المنتديات والمجتمعات التفاعلية للجريدة لضمان الولاء التام للعلامة.</li>
+                    </ul>
+                </div>
+
+                <!-- Job 3 -->
+                <div class="relative pr-8">
+                    <!-- Bullet dot -->
+                    <div class="absolute -right-[9px] top-1.5 w-4.5 h-4.5 rounded-full bg-brand-dark border-2 border-brand-gold"></div>
+                    <span class="text-xs font-extrabold text-brand-gold uppercase tracking-wider">2010 — 2013</span>
+                    <h4 class="text-xl font-bold text-white mt-1" data-key="exp3-role">أخصائي إدارة مجتمعات وسوشيال ميديا (Community & Social Media Specialist)</h4>
+                    <span class="text-sm font-semibold text-slate-400 block" data-key="exp3-company">مؤسسة ومصنعو آي إم سي (IMC MAKERS, eg)</span>
+                    <ul class="text-xs text-slate-400 mt-3 list-disc pr-4 space-y-2 leading-relaxed">
+                        <li data-key="exp3-l1">الشراكة مع فرق المبيعات وتجارة التجزئة لتطوير وإطلاق أقوى العروض الترويجية المصاصبة لتفضيلات السوق.</li>
+                        <li data-key="exp3-l2">رصد ومراقبة استراتيجيات المنافسين المباشرين وتقديم تحليل مستمر للبراند وسلوكيات الجماهير للشركة.</li>
+                        <li data-key="exp3-l3">إدارة وتنسيق ميزانيات الحملات التسويقية والإعلانية وقيادة فريق التنفيذ تحت ضغط وتوقيتات تسليم صارمة.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills and Toolbox -->
+    <section id="skills" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16 flex flex-col gap-3">
+            <h2 class="text-brand-gold text-xs font-bold uppercase tracking-wider" data-key="skills-tag">الترسانة التقنية والمهارية</h2>
+            <h3 class="text-3xl font-extrabold" data-key="skills-title">المهارات وأدوات صناعة النمو</h3>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Col 1 -->
+            <div class="bg-brand-card border border-brand-border p-8 rounded-xl flex flex-col gap-6">
+                <div class="w-12 h-12 bg-brand-gold/10 text-brand-gold text-2xl flex items-center justify-center rounded-lg">
+                    <i class="fa-solid fa-chart-pie"></i>
+                </div>
+                <h4 class="text-lg font-bold text-white" data-key="skill-g1-title">إدارة النمو والميديا باينج</h4>
+                <p class="text-xs text-slate-400 leading-relaxed" data-key="skill-g1-desc">خبرة في هندسة الاستهداف المتوازن، تفعيل نظام الطببات (Layering)، بناء حملات المشابه (LAL)، وتخفيض تكلفة رسايل المبيعات (CAC) إلى مستويات استثنائية.</p>
+            </div>
+
+            <!-- Col 2 -->
+            <div class="bg-brand-card border border-brand-border p-8 rounded-xl flex flex-col gap-6">
+                <div class="w-12 h-12 bg-brand-gold/10 text-brand-gold text-2xl flex items-center justify-center rounded-lg">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <h4 class="text-lg font-bold text-white" data-key="skill-g2-title">الأدوات الإبداعية وصناعة الكونتنت</h4>
+                <p class="text-xs text-slate-400 leading-relaxed" data-key="skill-g2-desc">الاحترافية المطلقة في توجيه وصياغة خطط إنتاج محتوى الفيديو والـ UGC لضمان هوك ريت (Hook Rate) مرتفع، مع مهارات تعديل وتصميم برامج:</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-[10px] font-bold bg-brand-dark px-3 py-1.5 border border-brand-border rounded text-slate-300">Adobe Photoshop</span>
+                    <span class="text-[10px] font-bold bg-brand-dark px-3 py-1.5 border border-brand-border rounded text-slate-300">Adobe Premiere Pro</span>
+                </div>
+            </div>
+
+            <!-- Col 3 -->
+            <div class="bg-brand-card border border-brand-border p-8 rounded-xl flex flex-col gap-6">
+                <div class="w-12 h-12 bg-brand-gold/10 text-brand-gold text-2xl flex items-center justify-center rounded-lg">
+                    <i class="fa-solid fa-gears"></i>
+                </div>
+                <h4 class="text-lg font-bold text-white" data-key="skill-g3-title">إدارة النظم والمعلومات والتواصل</h4>
+                <p class="text-xs text-slate-400 leading-relaxed" data-key="skill-g3-desc">بناء وتحليل سير الأعمال مدعوماً بحمل تخصصي متمثل بـ (بكالوريوس في نظم المعلومات الإدارية - MIS)، وخبرة تأسيسية عريضة في الاتصال والتنسيق الداخلي والمحلي.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Contact Form -->
+    <section id="contact" class="py-24 bg-brand-card/20 border-t border-brand-border">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16 flex flex-col gap-3">
+                <h2 class="text-brand-gold text-xs font-bold uppercase tracking-wider" data-key="contact-tag">قنوات التواصل المفتوحة</h2>
+                <h3 class="text-3xl font-extrabold" data-key="contact-title">لنبدأ في قيادة مشروعك القادم للقمة</h3>
+                <p class="text-slate-400 text-sm max-w-lg mx-auto" data-key="contact-desc">سواء كنت بحاجة إلى إعادة هيكلة وتطوير كفاءة مبيعات الشات وحملات الميديا باينج، أو تعزيز مجتمعات براندك الرقمية، أنا جاهز للنقاش الفوري.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+                
+                <!-- Info cards side -->
+                <div class="md:col-span-5 flex flex-col gap-6">
+                    <!-- Email Card -->
+                    <a href="mailto:m.nsayed2015@gmail.com" class="bg-brand-card border border-brand-border p-5 rounded-xl flex items-center gap-4 hover:border-brand-gold/50 transition-all">
+                        <div class="w-11 h-11 bg-brand-gold/10 text-brand-gold flex items-center justify-center rounded-lg text-lg">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-[10px] text-slate-400 font-bold uppercase" data-key="c-mail-title">البريد الإلكتروني المباشر</span>
+                            <span class="text-sm font-bold text-white">m.nsayed2015@gmail.com</span>
+                        </div>
+                    </a>
+
+                    <!-- Whatsapp Card -->
+                    <a href="https://wa.me/201012955040" target="_blank" class="bg-brand-card border border-brand-border p-5 rounded-xl flex items-center gap-4 hover:border-brand-gold/50 transition-all">
+                        <div class="w-11 h-11 bg-brand-emerald/10 text-brand-emerald flex items-center justify-center rounded-lg text-lg">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-[10px] text-slate-400 font-bold uppercase" data-key="c-phone-title">تواصل واتساب مباشر</span>
+                            <span class="text-sm font-bold text-white" dir="ltr">(+20) 10 1295 5040</span>
+                        </div>
+                    </a>
+
+                    <!-- Location Card -->
+                    <div class="bg-brand-card border border-brand-border p-5 rounded-xl flex items-center gap-4">
+                        <div class="w-11 h-11 bg-brand-gold/10 text-brand-gold flex items-center justify-center rounded-lg text-lg">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-[10px] text-slate-400 font-bold uppercase" data-key="c-loc-title">موقع الإقامة الدائم</span>
+                            <span class="text-sm font-bold text-white" data-key="c-loc-val">مصر، الجيزة، الهرم</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Side -->
+                <div class="md:col-span-7 bg-brand-card border border-brand-border p-8 rounded-xl">
+                    <form onsubmit="handleFormSubmit(event)" class="flex flex-col gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-400 uppercase mb-2" data-key="f-name-label">الاسم الكريم</label>
+                            <input type="text" required class="w-full bg-brand-dark border border-brand-border focus:border-brand-gold rounded-lg px-4 py-3 text-sm text-white outline-none transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-400 uppercase mb-2" data-key="f-mail-label">عنوان بريدك الإلكتروني</label>
+                            <input type="email" required class="w-full bg-brand-dark border border-brand-border focus:border-brand-gold rounded-lg px-4 py-3 text-sm text-white outline-none transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-400 uppercase mb-2" data-key="f-msg-label">تفاصيل مشروعك أو فكرتك</label>
+                            <textarea rows="4" required class="w-full bg-brand-dark border border-brand-border focus:border-brand-gold rounded-lg px-4 py-3 text-sm text-white outline-none transition-all resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-gradient-to-r from-brand-gold to-brand-goldHover text-brand-dark font-extrabold text-sm py-3.5 rounded-lg hover:shadow-lg hover:shadow-brand-gold/20 transition-all flex items-center justify-center gap-2" data-key="f-btn-submit">
+                            <i class="fa-solid fa-paper-plane"></i> إرسال الرسالة الآن
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark border-t border-brand-border py-12 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex flex-col text-center md:text-right">
+                <span class="text-brand-gold font-extrabold text-lg tracking-wider" data-key="footer-brand">محمد سيد مصطفى</span>
+                <span class="text-xs text-slate-500 mt-1" data-key="footer-copyright">حقوق النشر والتوزيع محفوظة لعام 2026 ©</span>
+            </div>
+            
+            <div class="flex items-center gap-6 text-xs text-slate-400 font-semibold">
+                <a href="#about" class="hover:text-brand-gold transition-colors" data-key="nav-link-about">من أنا</a>
+                <a href="#stats" class="hover:text-brand-gold transition-colors" data-key="nav-link-stats">الأرقام</a>
+                <a href="#portfolio" class="hover:text-brand-gold transition-colors" data-key="nav-link-portfolio">معرض الأداء</a>
+                <a href="#contact" class="hover:text-brand-gold transition-colors" data-key="nav-link-contact">تواصل معي</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Lightbox for Proof screenshots -->
+    <div id="lightbox" class="fixed inset-0 z-50 bg-brand-dark/95 backdrop-blur-md hidden items-center justify-center p-6" onclick="closeLightbox()">
+        <div class="relative max-w-5xl max-h-full flex flex-col items-center gap-4">
+            <button onclick="closeLightbox()" class="absolute -top-12 right-0 text-white hover:text-brand-gold text-3xl font-bold transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <img id="lightbox-img" src="" alt="Zoomed proof image" class="max-w-full max-h-[80vh] object-contain border border-brand-border rounded-xl">
+            <p class="text-xs text-slate-400 font-medium tracking-wider" id="lightbox-filename"></p>
+        </div>
+    </div>
+
+    <!-- JavaScript Translations & Interaction Engine -->
+    <script>
+        const translations = {
+            'ar': {
+                'nav-name': 'محمد سيد مصطفى',
+                'nav-title': 'خبير نمو وإدارة مجتمعات',
+                'nav-link-about': 'من أنا',
+                'nav-link-stats': 'الأرقام القياسية',
+                'nav-link-portfolio': 'معرض الأداء',
+                'nav-link-exp': 'الخبرات المهنية',
+                'nav-link-skills': 'المهارات',
+                'nav-link-contact': 'تواصل معي',
+                'nav-btn': 'وظفني الآن',
+                'hero-badge': 'متاح للمشاريع والفرص الكبرى',
+                'hero-title-1': 'أنا',
+                'hero-title-2': 'محمد سيد مصطفى',
+                'hero-subtitle': 'مسؤول نمو وإدارة مجتمعات تفاعلية (Growth & Community Manager)',
+                'hero-desc': 'أكثر من 15 عاماً من الخبرة الرقمية في قيادة استراتيجيات التواصل وإطلاق الحملات التسويقية التحويلية فائقة النجاح. توليت إدارة وتنشيط مجتمعات تفاعلية لأكبر الكيانات الصحفية والإعلامية في مصر مثل اليوم السابع والمصري اليوم، مع بناء ماكينات مبيعات رقمية (Performance Funnels) تحقق أعلى عوائد صرف ممكنة بتكلفة استحواذ استثنائية.',
+                'hero-btn-portfolio': 'رؤية مؤشرات الأداء',
+                'hero-btn-contact': 'تواصل مباشر',
+                'badge-experience-title': 'الخبرة المهنية',
+                'badge-experience-val': '+15 عاماً',
+                'section-stats-tag': 'عينة من قوة الأداء وحجم العمل الفعلي',
+                'stat-reach': 'إجمالي الوصول للعملاء (Reach)',
+                'stat-impressions': 'الظهور الإعلاني التراكمي (Impressions)',
+                'stat-cpa': 'تكلفة المحادثة (CPA)',
+                'stat-hook': 'متوسط جذب الانتباه بالفيديو (Hook Rate)',
+                'portfolio-tag': 'مستندات كفاءة الحساب الإعلاني',
+                'portfolio-title': 'إثبات الأداء بالأرقام واللقطات الحية',
+                'portfolio-desc': 'لا نعتمد على الآراء، بل نتحرك بقوة البيانات. إليك لقطات حية موثقة من داخل لوحة التحكم الإعلانية تظهر هندسة الاستهداف وإدارتي الفعالة لميزانيات الحملات الرقمية:',
+                'port-c1-tag': 'إحصائيات إجمالية',
+                'port-c1-file': 'ملف: 54083f14-5f00-4996-8f91-9cb1691a58e8.jpg',
+                'port-c1-title': 'لوحة أداء المليون والوصول الموحد',
+                'port-c1-desc': 'إظهار كفاءة التوصيل والانتشار الكلي بنسبة تكرار مضبوطة بدقة عند 2.95، بمجموع إنفاق تجاوز 276 ألف جنيه ومعدلات ظهور تخطت الـ 7 ملايين مرة.',
+                'port-c2-tag': 'كفاءة الفيديو',
+                'port-c2-file': 'ملف: 96ce7c82-dc26-45e9-868d-9eef3af4b927.jpg',
+                'port-c2-title': 'مقياس التفاعل والـ Hook Rate الأسطوري',
+                'port-c2-desc': 'تحقيق تفاعل مذهل بمتوسط سعر 0.01 ج.م للتفاعل الواحد، مع خطف انتباه فوري للمستخدمين (Hook Rate 55%) لأول خمس ثوان حاسمة في تجربة المشاهدة.',
+                'port-c3-tag': 'تحويل المبيعات (B2C)',
+                'port-c3-file': 'ملف: bc1f1414-72e1-4306-bbd6-b5d23991b278.jpg',
+                'port-c3-title': 'بدء المحادثات الشرائية بتكلفة متدنية جداً',
+                'port-c3-desc': 'بناء أداء تحويلي فائق الجودة مكننا من حصد 1,170 رسالة شراء حقيقية في فترة زمنية قصيرة بمتوسط تكلفة رسالة لا يتخطى الـ 1.14 ج.م فقط.',
+                'port-c4-tag': 'هندسة الطببات والمجموعات',
+                'port-c4-file': 'ملف: dce152a1-4d70-40bd-acb3-8fb907461d7f.jpg',
+                'port-c4-title': 'توزيع ميزانيات الاستهداف المتوازن والـ Layering',
+                'port-c4-desc': 'المرونة في تقسيم البادجيت اليومي بين مجموعات مخصصة تضمن حصد رسائل بمتوسط 1.48 ج.م و 1.62 ج.م بحدود استثمارية مرنة وآمنة.',
+                'exp-tag': 'تطور المسيرة الإستراتيجية',
+                'exp-title': 'الخبرات المهنية والمؤسسية',
+                'exp1-role': 'مدير مجتمعات تسويقية ورقمية (Community Manager)',
+                'exp1-company': 'جريدة ومؤسسة اليوم السابع (Al youm7, eg)',
+                'exp1-l1': 'تحليل كامل لأداء جميع المنصات الإعلانية والبرامج التسويقية لتحديد الثغرات وفرص التحسين لرفع معدلات الـ CRO.',
+                'exp1-l2': 'إدارة وتنشيط تجمعات مستخدمي الهوية الرقمية للجريدة وتوجيه مسارات النشر للمحتوى الفيروسي الساخن والموثوق.',
+                'exp1-l3': 'تنمية وتعزيز ظهور البراند العام عبر تحسين محركات البحث التنافسية (SEO Optimization) والتصاميم الراقية الجاذبة.',
+                'exp1-l4': 'إعداد تقارير وتحليلات ربع سنوية وشهرية لتوزيع ميزانيات الإعلان بكفاءة وضمان تحقيق الأهداف البيعية المرسومة.',
+                'exp2-role': 'مساعد مدير المجتمعات الرقمية (Community Assistant Manager)',
+                'exp2-company': 'جريدة ومؤسسة المصري اليوم (Almasry alyoum newspaper, eg)',
+                'exp2-l1': 'تحليل واستكشاف وتطوير الاستراتيجيات التسويقية الفعالة من واقع دراسة أهداف الجريدة وأحوال السوق المحلية والجمهور.',
+                'exp2-l2': 'إدارة تدفق وسير عمل صناعة ونشر الكونتنت، بالتنسيق مع الجهات القانونية والتحريرية والمراجعين الداخليين.',
+                'exp2-l3': 'مراقبة وقياس مدى تفاعل الجماهير عبر صفحات السوشيال ميديا ووضع معايير القياس لتقليل تكلفة الوصول والاستحواذ.',
+                'exp2-l4': 'تقديم خدمة عملاء ودعم استثنائي وسريع لأعضاء المنتديات والمجتمعات التفاعلية للجريدة لضمان الولاء التام للعلامة.',
+                'exp3-role': 'أخصائي إدارة مجتمعات وسوشيال ميديا (Community & Social Media Specialist)',
+                'exp3-company': 'مؤسسة ومصنعو آي إم سي (IMC MAKERS, eg)',
+                'exp3-l1': 'الشراكة مع فرق المبيعات وتجارة التجزئة لتطوير وإطلاق أقوى العروض الترويجية المصاحبة لتفضيلات السوق.',
+                'exp3-l2': 'رصد ومراقبة استراتيجيات المنافسين المباشرين وتقديم تحليل مستمر للبراند وسلوكيات الجماهير للشركة.',
+                'exp3-l3': 'إدارة وتنسيق ميزانيات الحملات التسويقية والإعلانية وقيادة فريق التنفيذ تحت ضغط وتوقيتات تسليم صارمة.',
+                'skills-tag': 'الترسانة التقنية والمهارية',
+                'skills-title': 'المهارات وأدوات صناعة النمو',
+                'skill-g1-title': 'إدارة النمو والميديا باينج',
+                'skill-g1-desc': 'خبرة في هندسة الاستهداف المتوازن، تفعيل نظام الطببات (Layering)، بناء حملات المشابه (LAL)، وتخفيض تكلفة رسايل المبيعات (CAC) إلى مستويات استثنائية.',
+                'skill-g2-title': 'الأدوات الإبداعية وصناعة الكونتنت',
+                'skill-g2-desc': 'الاحترافية المطلقة في توجيه وصياغة خطط إنتاج محتوى الفيديو والـ UGC لضمان هوك ريت (Hook Rate) مرتفع، مع مهارات تعديل وتصميم برامج:',
+                'skill-g3-title': 'إدارة النظم والمعلومات والتواصل',
+                'skill-g3-desc': 'بناء وتحليل سير الأعمال مدعوماً بحمل تخصصي متمثل بـ (بكالوريوس في نظم المعلومات الإدارية - MIS)، وخبرة تأسيسية عريضة في الاتصال والتنسيق الداخلي والمحلي.',
+                'contact-tag': 'قنوات التواصل المفتوحة',
+                'contact-title': 'لنبدأ في قيادة مشروعك القادم للقمة',
+                'contact-desc': 'سواء كنت بحاجة إلى إعادة هيكلة وتطوير كفاءة مبيعات الشات وحملات الميديا باينج، أو تعزيز مجتمعات براندك الرقمية، أنا جاهز للنقاش الفوري.',
+                'c-mail-title': 'البريد الإلكتروني المباشر',
+                'c-phone-title': 'تواصل واتساب مباشر',
+                'c-loc-title': 'موقع الإقامة الدائم',
+                'c-loc-val': 'مصر، الجيزة، الهرم',
+                'f-name-label': 'الاسم الكريم',
+                'f-mail-label': 'عنوان بريدك الإلكتروني',
+                'f-msg-label': 'تفاصيل مشروعك أو فكرتك',
+                'f-btn-submit': 'إرسال الرسالة الآن',
+                'footer-brand': 'محمد سيد مصطفى',
+                'footer-copyright': 'حقوق النشر والتوزيع محفوظة لعام 2026 ©'
+            },
+            'en': {
+                'nav-name': 'Mohamed Sayed M.',
+                'nav-title': 'Growth & Community Manager',
+                'nav-link-about': 'About',
+                'nav-link-stats': 'Metrics',
+                'nav-link-portfolio': 'Performance Hub',
+                'nav-link-exp': 'Experience',
+                'nav-link-skills': 'Skills',
+                'nav-link-contact': 'Contact',
+                'nav-btn': 'Hire Me Now',
+                'hero-badge': 'Available for Premium Projects',
+                'hero-title-1': 'I am',
+                'hero-title-2': 'Mohamed Sayed',
+                'hero-subtitle': 'Growth & High-Conversion Community Manager',
+                'hero-desc': 'Over 15 years of digital dominance driving multi-stakeholder strategy, user interaction, and ROI-centric performance advertising. Spearheaded high-scale communities for Egypt\'s premier publishing giants Al Youm7 and Al-Masry Al-Youm, and designed automated digital funnels delivering outstanding messaging conversions and industry-leading acquisition costs.',
+                'hero-btn-portfolio': 'View Ad Account Proof',
+                'hero-btn-contact': 'Direct Message',
+                'badge-experience-title': 'Strategic Experience',
+                'badge-experience-val': '+15 Years',
+                'section-stats-tag': 'Verified Live Campaign Performance Indicators',
+                'stat-reach': 'Total Audience Reach',
+                'stat-impressions': 'Aggregated Impressions',
+                'stat-cpa': 'Average Cost Per Conversation',
+                'stat-hook': 'Average Video Hook Rate (5s)',
+                'portfolio-tag': 'Meta Ad Account Verification Documents',
+                'portfolio-title': 'Data-Driven Performance Showcase',
+                'portfolio-desc': 'We do not sell theories; we drive hard parameters. Check out verified dashboard screenshots proving active targeting logic and spend management:',
+                'port-c1-tag': 'Aggregated Reach',
+                'port-c1-file': 'File: 54083f14-5f00-4996-8f91-9cb1691a58e8.jpg',
+                'port-c1-title': 'Mass Distribution & Delivery Board',
+                'port-c1-desc': 'Secured robust audience penetration exceeding 2.49M unique accounts and 7.35M impressions, maintaining a controlled frequency of 2.95 with absolute capital efficiency.',
+                'port-c2-tag': 'Video Metrics',
+                'port-c2-file': 'File: 96ce7c82-dc26-45e9-868d-9eef3af4b927.jpg',
+                'port-c2-title': 'High-Conversion Video Hook Performance',
+                'port-c2-desc': 'Engineered viral video retention resulting in a 55% average Hook Rate, converting rapid plays at an exceptional engagement cost of 0.01 EGP.',
+                'port-c3-tag': 'Conversion Funnel',
+                'port-c3-file': 'File: bc1f1414-72e1-4306-bbd6-b5d23991b278.jpg',
+                'port-c3-title': 'High-Intent Messaging Lead Optimization',
+                'port-c3-desc': 'Collected 1,170 hyper-relevant product purchase conversations with an unmatched and highly profitable Cost Per Acquisition (CPA) of just 1.14 EGP per lead.',
+                'port-c4-tag': 'Precision Ad Sets',
+                'port-c4-file': 'File: dce152a1-4d70-40bd-acb3-8fb907461d7f.jpg',
+                'port-c4-title': 'Balanced Stacked Targeting & Layering',
+                'port-c4-desc': 'Optimizing daily allocation across laser-targeted sets to secure stable, low-cost conversations (1.48 EGP and 1.62 EGP) with scalable and secure daily budgets.',
+                'exp-tag': 'Professional Milestones',
+                'exp-title': 'Institutional Career Timeline',
+                'exp1-role': 'Community Manager',
+                'exp1-company': 'Al Youm7 Media Enterprise (Al youm7, eg)',
+                'exp1-l1': 'Analyzed performance metrics across channels to coordinate high-converting optimizations and maximize ROI.',
+                'exp1-l2': 'Managed community engagement and product launches aligning content workflow with user expectations.',
+                'exp1-l3': 'Drove organic brand traffic via structured SEO practices and state-of-the-art interactive digital layouts.',
+                'exp1-l4': 'Established detailed marketing budgets and forecasts on daily, weekly, and quarterly milestones.',
+                'exp2-role': 'Community Assistant Manager',
+                'exp2-company': 'Al-Masry Al-Youm Newspaper (almasry alyoum, eg)',
+                'exp2-l1': 'Formulated modern audience engagement strategies aligned with business priorities and market trends.',
+                'exp2-l2': 'Supervised content moderation workflow, leading internal legal and quality assurance alignment.',
+                'exp2-l3': 'Reviewed and analyzed performance data across networks to coordinate corrective social media programs.',
+                'exp2-l4': 'Provided premium, responsive customer service to active community segments and digital readers.',
+                'exp3-role': 'Community & Social Media Specialist',
+                'exp3-company': 'IMC MAKERS Enterprise (IMC MAKERS, eg)',
+                'exp3-l1': 'Partnered with product managers to layout and deploy high-converting seasonal campaign activations.',
+                'exp3-l2': 'Conducted structured competitor analysis to improve local brand perception and communication patterns.',
+                'exp3-l3': 'Coordinated campaign budgets and cross-functional taskforces under tight project deadlines.',
+                'skills-tag': 'Strategic Capabilities',
+                'skills-title': 'Tools & Growth Marketing Suite',
+                'skill-g1-title': 'Growth & Paid Media Stack',
+                'skill-g1-desc': 'Extensive track record deploying laser-focused custom layering (الطببات), lookalike models, messaging funnels, and reducing user acquisition costs.',
+                'skill-g2-title': 'Creative Asset Management',
+                'skill-g2-desc': 'In-depth expertise in drafting high-retention video layouts and editing top-converting UGC. Proficient with advanced design platforms:',
+                'skill-g3-title': 'Business Intelligence & MIS',
+                'skill-g3-desc': 'Possessing a solid academic foundation with a Bachelor\'s Degree in Management Information Systems (MIS), facilitating data integrity and CRM automation.',
+                'contact-tag': 'Open Channels',
+                'contact-title': 'Let\'s Secure Your Scale Goals',
+                'contact-desc': 'Whether you want to audit your chat conversion system, optimize your CAC, or build premium brand communities, I am ready to engage.',
+                'c-mail-title': 'Direct Institutional Email',
+                'c-phone-title': 'WhatsApp Direct Contact',
+                'c-loc-title': 'Primary Location',
+                'c-loc-val': 'Al Haram, Giza, Egypt',
+                'f-name-label': 'Full Name',
+                'f-mail-label': 'Email Address',
+                'f-msg-label': 'Project Concept or Inquiry',
+                'f-btn-submit': 'Send Direct Message',
+                'footer-brand': 'Mohamed Sayed M.',
+                'footer-copyright': 'All Rights Reserved © 2026'
+            }
+        };
+
+        let currentLang = 'ar';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            document.documentElement.setAttribute('dir', currentLang === 'ar' ? 'rtl' : 'ltr');
+            document.documentElement.setAttribute('lang', currentLang);
+            
+            // Swap button label
+            document.getElementById('lang-btn-text').innerText = currentLang === 'ar' ? 'English' : 'العربية';
+
+            // Swap all texts with data-key attribute
+            document.querySelectorAll('[data-key]').forEach(element => {
+                const key = element.getAttribute('data-key');
+                if (translations[currentLang][key]) {
+                    element.innerHTML = translations[currentLang][key];
+                }
+            });
+
+            // Adjust navigation layout alignment classes dynamically
+            const heroText = document.getElementById('hero-text-container');
+            const timeline = document.getElementById('experience-timeline');
+            if (currentLang === 'en') {
+                heroText.classList.remove('lg:text-right', 'lg:mr-0', 'lg:ml-auto');
+                heroText.classList.add('lg:text-left', 'lg:ml-0', 'lg:mr-auto');
+                
+                timeline.classList.remove('border-r', 'mr-4', 'lg:mr-0');
+                timeline.classList.add('border-l', 'ml-4', 'lg:ml-0');
+                
+                document.querySelectorAll('.relative.pr-8').forEach(el => {
+                    el.classList.remove('pr-8');
+                    el.classList.add('pl-8');
+                });
+                document.querySelectorAll('.absolute.\\-right-\\[9px\\]').forEach(el => {
+                    el.classList.remove('-right-[9px]');
+                    el.classList.add('-left-[9px]');
+                });
+            } else {
+                heroText.classList.add('lg:text-right', 'lg:mr-0', 'lg:ml-auto');
+                heroText.classList.remove('lg:text-left', 'lg:ml-0', 'lg:mr-auto');
+                
+                timeline.classList.add('border-r', 'mr-4', 'lg:mr-0');
+                timeline.classList.remove('border-l', 'ml-4', 'lg:ml-0');
+                
+                document.querySelectorAll('.relative.pl-8').forEach(el => {
+                    el.classList.remove('pl-8');
+                    el.classList.add('pr-8');
+                });
+                document.querySelectorAll('.absolute.\\-left-\\[9px\\]').forEach(el => {
+                    el.classList.remove('-left-[9px]');
+                    el.classList.add('-right-[9px]');
+                });
+            }
+        }
+
+        // Lightbox Functions
+        function openLightbox(imgSrc) {
+            document.getElementById('lightbox-img').src = imgSrc;
+            document.getElementById('lightbox-filename').innerText = imgSrc;
+            document.getElementById('lightbox').classList.remove('hidden');
+            document.getElementById('lightbox').classList.add('flex');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('flex');
+            document.getElementById('lightbox').classList.add('hidden');
+        }
+
+        // Form submission handling
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            alert(currentLang === 'ar' ? 'شكراً لتواصلك يا فندم! تم إرسال رسالتك بنجاح وسوف يقوم محمد بالرد عليك فوراً.' : 'Thank you for reaching out! Your message was sent successfully. Mohamed will get back to you shortly.');
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>
