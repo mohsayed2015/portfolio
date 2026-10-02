@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>استراتيجية المحتوى والتواصل المؤسسي - المعهد القومي للأورام</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Google Fonts: Cairo & Tajawal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#0B3C5D',
+                        cyan: '#328CC1',
+                        terracotta: '#C27D38',
+                        slate: '#4A5568',
+                        offwhite: '#F8FAFC'
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        tajawal: ['Tajawal', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #F8FAFC;
+            color: #4A5568;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cairo', sans-serif;
+        }
+        /* Chart Container Strict Dimensions */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 360px;
+            }
+        }
+        .custom-card {
+            background-color: #FFFFFF;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            border-top: 4px solid #328CC1;
+        }
+        .accent-card {
+            border-top-color: #C27D38;
+        }
+        .navy-card {
+            border-top-color: #0B3C5D;
+        }
+    </style>
+</head>
+<body class="bg-offwhite min-h-screen">
+
+    <!-- 
+    Color Palette: NCI Academic & Clinical Precision Palette
+    - Navy Blue (#0B3C5D): Main Titles, Academic Branding
+    - Clinical Cyan (#328CC1): Subtitles, Visual Data Highlights
+    - Terracotta Sand (#C27D38): Donation CTA, Human Stories
+    - Slate Gray (#4A5568): Body Text, Technical Metrics
+    - Clinical Off-White (#F8FAFC): Background Surface
+    -->
+
+    <!-- 
+    Narrative Plan:
+    1. Hero Header & Core KPIs: Establish authority, high volume of free care (85-90%), and overall operational scale.
+    2. Clinical Infrastructure & Facilities: Compare operational capacity across Main NCI, Breast Hospital, and 500 500.
+    3. Diagnostic Precision & Modern Therapies: Show Multi-Disciplinary Team (MDT) workflow, genomic profiling, and modern treatment modalities.
+    4. Cancer Epidemiology & Early Detection: Present cancer type distribution in Egypt and demonstrate early detection survival rate advantages.
+    5. Patient Care Navigation & Guidance: Map out the 7-step patient journey and symptom management for caregivers.
+    6. Philanthropy & Urgent Intervention: Connect donation efficiency with Time-to-Treatment imperative and state clear bank channels.
+    7. Digital Content & Internal Display Strategy: Outline multi-channel social media schedule and internal 30-min TV broadcast loop.
+    -->
+
+    <!-- 
+    Visualizations Plan:
+    1. Chart 1 (Bar Chart - Chart.js): Capacity & Daily Traffic across NCI Facilities (Compare Bed Capacity vs Daily Operations).
+    2. Chart 2 (Doughnut Chart - Chart.js): Cancer Types Distribution in Egypt (Breast 35%, Liver 20%, Lung 15%, GI/Colon 15%, Hematology 10%, Others 5%).
+    3. Chart 3 (Bar Chart - Chart.js): 5-Year Survival Rates: Early Detection vs Stage IV Diagnosis (Demonstrates life-saving impact of early detection).
+    4. Chart 4 (Pie Chart - Chart.js): Annual Operating Budget Sources (Donations 70% vs State Support 30%).
+    5. Patient Journey Timeline & Clinic Schedule: Built using structured Tailwind CSS HTML flex grids.
+    - Confirmation: NEITHER Mermaid JS NOR SVG graphics were used anywhere in this document.
+    -->
+
+    <!-- Header / Navigation Bar -->
+    <header class="bg-navy text-white sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center space-x-4 space-x-reverse mb-3 md:mb-0">
+                <div class="w-12 h-12 rounded-full bg-white text-navy flex items-center justify-center font-black text-xl shadow-inner border-2 border-terracotta">
+                    NCI
+                </div>
+                <div>
+                    <h1 class="text-xl md:text-2xl font-black tracking-wide">المعهد القومي للأورام – جامعة القاهرة</h1>
+                    <p class="text-xs text-cyan font-medium">الاستراتيجية الشاملة للمحتوى والتواصل المؤسسي والتوعية الطبية</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-2 text-sm">
+                <a href="#donations" class="bg-terracotta hover:bg-opacity-90 text-white px-4 py-2 rounded-lg font-bold transition shadow">
+                    تبرع الآن (حساب 777 & 500500)
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+
+        <!-- Hero Section & Key Performance Indicators -->
+        <section class="bg-white rounded-2xl p-6 md:p-8 shadow-lg border border-gray-100">
+            <div class="max-w-3xl mb-8">
+                <span class="inline-block bg-cyan bg-opacity-10 text-cyan font-bold px-3 py-1 rounded-full text-sm mb-3">
+                    الصرح الطبي والأكاديمي الأكبر بالشرق الأوسط
+                </span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-navy mb-4 leading-tight">
+                    منظومة علاجية تشخيصية متكاملة لمكافحة السرطان ورعاية المرضى بالمجان
+                </h2>
+                <p class="text-slate text-base md:text-lg leading-relaxed">
+                    يستقبل المعهد القومي للأورام نحو 25% من مجمل الحالات السرطانية الجديدة المشخصة سنوياً على مستوى جمهورية مصر العربية، مع تقديم خدمة علاجية ورعاية إكلينيكية مجانية بالكامل لما يقارب 85% إلى 90% من إجمالي المرضى المترددين.
+                </p>
+            </div>
+
+            <!-- KPI Cards Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-offwhite p-5 rounded-xl text-center border-b-4 border-navy">
+                    <div class="text-3xl md:text-4xl font-black text-navy mb-1">25%</div>
+                    <div class="text-xs md:text-sm text-slate font-bold">من أورام مصر تُعالج بالمعهد</div>
+                </div>
+                <div class="bg-offwhite p-5 rounded-xl text-center border-b-4 border-cyan">
+                    <div class="text-3xl md:text-4xl font-black text-cyan mb-1">90%</div>
+                    <div class="text-xs md:text-sm text-slate font-bold">نسبة العلاج المجاني بالكامل</div>
+                </div>
+                <div class="bg-offwhite p-5 rounded-xl text-center border-b-4 border-terracotta">
+                    <div class="text-3xl md:text-4xl font-black text-terracotta mb-1">1,000+</div>
+                    <div class="text-xs md:text-sm text-slate font-bold">مريض يستقبلهم المبنى الرئيسي يومياً</div>
+                </div>
+                <div class="bg-offwhite p-5 rounded-xl text-center border-b-4 border-navy">
+                    <div class="text-3xl md:text-4xl font-black text-navy mb-1">70%</div>
+                    <div class="text-xs md:text-sm text-slate font-bold">نسبة تغطية التبرعات للمكلفات</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 1: Infrastructure & Clinical Capacity -->
+        <section class="space-y-6">
+            <div class="border-r-4 border-navy pr-4">
+                <h2 class="text-2xl md:text-3xl font-bold text-navy">1. البنية الإكلينيكية والمستشفيات التابعة</h2>
+                <p class="text-slate text-sm md:text-base mt-1">
+                    تتوزع القدرات التشغيلية للمعهد عبر ثلاثة مراكز جغرافية رئيسية تعمل بتكامل إداري وفني لتأمين الخدمة الطبية لمرضى الأورام من الكبار والأطفال.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- Data Visual Narrative -->
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="custom-card p-5 navy-card">
+                        <h3 class="font-bold text-lg text-navy mb-2">المستشفى الرئيسي (فم الخليج)</h3>
+                        <p class="text-sm text-slate leading-relaxed">
+                            يضم 496 سريراً، و49 سرير رعاية مركزة، و16 غرفة عمليات كبرى. يجري سنوياً أكثر من 4,000 جراحة كبرى و63,000 جلسة إشعاع.
+                        </p>
+                    </div>
+                    <div class="custom-card p-5">
+                        <h3 class="font-bold text-lg text-cyan mb-2">مستشفى أورام الثدي (التجمع الأول)</h3>
+                        <p class="text-sm text-slate leading-relaxed">
+                            أول مركز حكومي مجاني متخصص بمساحة 25,000 م². يستقبل يتجاوز 91,000 مريض سنوياً وينفذ 56,000 جلسة علاج كيميائي وإشعاعي.
+                        </p>
+                    </div>
+                    <div class="custom-card p-5 accent-card">
+                        <h3 class="font-bold text-lg text-terracotta mb-2">المعهد الجديد (500 500 الشيخ زايد)</h3>
+                        <p class="text-sm text-slate leading-relaxed">
+                            صرح مستدام بمساحة 240,000 م² وسعة 360 سريراً داخلياً و180 سريراً لعلاج اليوم الواحد مع تخصيص 40% لأورام الأطفال.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Chart Container -->
+                <div class="lg:col-span-7 bg-white p-6 rounded-xl shadow border border-gray-100">
+                    <h3 class="text-lg font-bold text-navy mb-2 text-center">مقارنة الطاقة الاستيعابية والتردد السنوي للمنشآت</h3>
+                    <p class="text-xs text-slate text-center mb-4">يوضح الرسم البياني التوزيع السريري والعمليات اليومية بالمقارنة بين مستشفيات المعهد الثلاثة</p>
+                    
+                    <div class="chart-container">
+                        <canvas id="facilitiesChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Outpatient Schedule Table Card -->
+            <div class="bg-white p-6 rounded-xl shadow border border-gray-100 mt-6">
+                <h3 class="text-xl font-bold text-navy mb-4">جدول تشغيل العيادات الخارجية التخصصية (المبنى الرئيسي)</h3>
+                <p class="text-sm text-slate mb-4">تفتح العيادات المجانية أبوابها من 8:00 صباحاً حتى 3:00 عصراً، تليها العيادات الاقتصادية الممتدة حتى 6:00 مساءً.</p>
+                
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm text-right text-slate">
+                        <thead class="bg-navy text-white text-xs uppercase">
+                            <tr>
+                                <th class="px-4 py-3 rounded-r-lg">اليوم الأسبوعي</th>
+                                <th class="px-4 py-3">التخصصات الجراحية والإكلينيكية العاملة</th>
+                                <th class="px-4 py-3 rounded-l-lg">ملاحظات المسار الإجرائي</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100 font-medium">
+                            <tr class="hover:bg-offwhite">
+                                <td class="px-4 py-3 font-bold text-navy">السبت</td>
+                                <td class="px-4 py-3">أورام الرأس والرقبة، أورام الجهاز الهضمي، أورام الثدي، أورام المسالك البولية</td>
+                                <td class="px-4 py-3 text-xs text-cyan">فتح الملفات والكشف الأولي</td>
+                            </tr>
+                            <tr class="hover:bg-offwhite">
+                                <td class="px-4 py-3 font-bold text-navy">الأحد</td>
+                                <td class="px-4 py-3">أورام العظام والأنسجة الرخوة (ساركوما)، أورام الصدر والرئة، أورام النساء والتوليد</td>
+                                <td class="px-4 py-3 text-xs text-cyan">مناظرة فحوصات العظام والصدر</td>
+                            </tr>
+                            <tr class="hover:bg-offwhite">
+                                <td class="px-4 py-3 font-bold text-navy">الاثنين</td>
+                                <td class="px-4 py-3">أورام الكبد والبنكرياس والقنوات المرارية، أورام الرأس والرقبة، أورام الثدي</td>
+                                <td class="px-4 py-3 text-xs text-cyan">تحويلات جراحة الكبد المتقدمة</td>
+                            </tr>
+                            <tr class="hover:bg-offwhite">
+                                <td class="px-4 py-3 font-bold text-navy">الثلاثاء</td>
+                                <td class="px-4 py-3">جراحة أورام الثدي، أورام المسالك البولية، أورام الجهاز التناسلي الأنثوي</td>
+                                <td class="px-4 py-3 text-xs text-cyan">متابعة بروتوكولات الثدي والنساء</td>
+                            </tr>
+                            <tr class="hover:bg-offwhite">
+                                <td class="px-4 py-3 font-bold text-navy">الأربعاء</td>
+                                <td class="px-4 py-3">أورام الصدر، أورام القولون والجهاز الهضمي، أورام الثدي</td>
+                                <td class="px-4 py-3 text-xs text-cyan">لجان مناظرة القولون والصدر</td>
+                            </tr>
+                            <tr class="hover:bg-offwhite">
+                                <td class="px-4 py-3 font-bold text-navy">الخميس</td>
+                                <td class="px-4 py-3">جراحة أورام العظام، أورام الرأس والرقبة، عيادات المتابعة الدورية</td>
+                                <td class="px-4 py-3 text-xs text-cyan">متابعات ما بعد الجراحة والإشعاع</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Diagnostic Precision & Modern Treatments -->
+        <section class="space-y-6">
+            <div class="border-r-4 border-cyan pr-4">
+                <h2 class="text-2xl md:text-3xl font-bold text-navy">2. دقة التشخيص وبروتوكولات العلاج الحديثة</h2>
+                <p class="text-slate text-sm md:text-base mt-1">
+                    ترتكز فلسفة العلاج داخل المعهد على مبادئ الطب الشخصي الدقيق (Precision Medicine) والقرارات الجماعية عبر اللجان متعددة التخصصات (MDT).
+                </p>
+            </div>
+
+            <!-- Grid of Modalities -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="custom-card p-6">
+                    <div class="w-10 h-10 rounded-full bg-cyan bg-opacity-10 text-cyan flex items-center justify-center font-bold mb-4">01</div>
+                    <h3 class="font-bold text-lg text-navy mb-2">الفحوصات الجينية والجيل القادم (NGS)</h3>
+                    <p class="text-sm text-slate leading-relaxed">
+                        تحديد الطفرات الجينية الدقيقة (مثل EGFR, KRAS, BRCA1/2) والتنميط الفيروسي الجزيئي لتحديد الدواء الموجه بدقة متناهية.
+                    </p>
+                </div>
+                <div class="custom-card p-6 navy-card">
+                    <div class="w-10 h-10 rounded-full bg-navy bg-opacity-10 text-navy flex items-center justify-center font-bold mb-4">02</div>
+                    <h3 class="font-bold text-lg text-navy mb-2">العلاج المناعي والموجه</h3>
+                    <p class="text-sm text-slate leading-relaxed">
+                        تثبيط إشارات التكاثر السرطاني وتحفيز كبح نقاط التفتيش المناعية (PD-1/PD-L1) لمهاجمة الخلايا الخبيثة دون كبح الخلايا السليمة.
+                    </p>
+                </div>
+                <div class="custom-card p-6 accent-card">
+                    <div class="w-10 h-10 rounded-full bg-terracotta bg-opacity-10 text-terracotta flex items-center justify-center font-bold mb-4">03</div>
+                    <h3 class="font-bold text-lg text-navy mb-2">زراعة النخاع العظمي (BMT)</h3>
+                    <p class="text-sm text-slate leading-relaxed">
+                        وحدة الدكتور حسام كامل المجهزة بغرف عزل كبسولية وفلاتر هواء HEPA فائقة الكفاءة لعلاج سرطانات الدم والليمفوما.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Cancer Epidemiology & Early Detection Impact -->
+        <section class="space-y-6">
+            <div class="border-r-4 border-terracotta pr-4">
+                <h2 class="text-2xl md:text-3xl font-bold text-navy">3. الخارطة الوبائية ومردود الكشف المبكر</h2>
+                <p class="text-slate text-sm md:text-base mt-1">
+                    يتعامل المعهد مع توزيع وبائي يعكس خصائص المجتمع المصري، مع التركيز على مبادرات الكشف المبكر التي ترفع نسب الشفاء التام إلى أكثر من 90%.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <!-- Doughnut Chart: Distribution -->
+                <div class="lg:col-span-6 bg-white p-6 rounded-xl shadow border border-gray-100">
+                    <h3 class="text-lg font-bold text-navy mb-2 text-center">توزيع أنواع الأورام الشائعة بالمعهد</h3>
+                    <p class="text-xs text-slate text-center mb-4">تتصدر أورام الثدي الحالات بنسبة تفوق 35% يليها الكبد والرئة والقولون</p>
+                    
+                    <div class="chart-container">
+                        <canvas id="cancerTypeChart"></canvas>
+                    </div>
+                    <div class="mt-4 text-xs text-slate text-center bg-offwhite p-3 rounded-lg">
+                        تتكامل هذه البيانات مع المبادرات الرئاسية القومية للكشف المبكر عن أورام الثدي والكبد والقولون وعنق الرحم.
+                    </div>
+                </div>
+
+                <!-- Bar Chart: Survival Rate Comparison -->
+                <div class="lg:col-span-6 bg-white p-6 rounded-xl shadow border border-gray-100">
+                    <h3 class="text-lg font-bold text-navy mb-2 text-center">نسب الشفاء لمدة 5 سنوات: الكشف المبكر مقابل التشخيص المتأخر</h3>
+                    <p class="text-xs text-slate text-center mb-4">يوضح الفارق الهائل في معدلات النجاة عند اكتشاف المرض في مرحلته الأولى</p>
+                    
+                    <div class="chart-container">
+                        <canvas id="survivalRateChart"></canvas>
+                    </div>
+                    <div class="mt-4 text-xs text-slate text-center bg-offwhite p-3 rounded-lg">
+                        الكشف المبكر يجنب المريض الجراحات الاستئصالية الواسعة والعلاجات المكثفة باهظة التكلفة.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Patient Care Navigation & Flow -->
+        <section class="space-y-6">
+            <div class="border-r-4 border-navy pr-4">
+                <h2 class="text-2xl md:text-3xl font-bold text-navy">4. الوعي الخدمي وخريطة مسار المريض والمرافق</h2>
+                <p class="text-slate text-sm md:text-base mt-1">
+                    لتخفيف الأعباء النفسية واللوجستية، تم تحديد خطة عمل من 7 مراحل تنظيمية لشرح الرحلة العلاجية داخل أقسام المعهد.
+                </p>
+            </div>
+
+            <!-- Patient Journey Workflow Steps -->
+            <div class="grid grid-cols-1 md:grid-cols-7 gap-3">
+                <div class="bg-white p-4 rounded-xl border-t-4 border-navy shadow text-center">
+                    <div class="w-8 h-8 rounded-full bg-navy text-white font-bold mx-auto mb-2 flex items-center justify-center text-sm">1</div>
+                    <h4 class="font-bold text-xs text-navy mb-1">التسجيل والملف</h4>
+                    <p class="text-[11px] text-slate">قطع التذكرة وفتح الملف الطبي الموحد بالرقم القومي.</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl border-t-4 border-cyan shadow text-center">
+                    <div class="w-8 h-8 rounded-full bg-cyan text-white font-bold mx-auto mb-2 flex items-center justify-center text-sm">2</div>
+                    <h4 class="font-bold text-xs text-navy mb-1">العيادة الخارجية</h4>
+                    <p class="text-[11px] text-slate">المناظرة الإكلينيكية وطلب التحاليل والأشعة الأولية.</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl border-t-4 border-navy shadow text-center">
+                    <div class="w-8 h-8 rounded-full bg-navy text-white font-bold mx-auto mb-2 flex items-center justify-center text-sm">3</div>
+                    <h4 class="font-bold text-xs text-navy mb-1">الفحوصات والخزعة</h4>
+                    <p class="text-[11px] text-slate">إجراء أشعة PET-CT وتحليل الخزعة النسيجية.</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl border-t-4 border-terracotta shadow text-center">
+                    <div class="w-8 h-8 rounded-full bg-terracotta text-white font-bold mx-auto mb-2 flex items-center justify-center text-sm">4</div>
+                    <h4 class="font-bold text-xs text-navy mb-1">قرارات العلاج</h4>
+                    <p class="text-[11px] text-slate">استصدار قرار نفقة الدولة أو التأمين دون تحميل المريض تكلفة.</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl border-t-4 border-navy shadow text-center">
+                    <div class="w-8 h-8 rounded-full bg-navy text-white font-bold mx-auto mb-2 flex items-center justify-center text-sm">5</div>
+                    <h4 class="font-bold text-xs text-navy mb-1">لجنة MDT</h4>
+                    <p class="text-[11px] text-slate">إقرار البروتوكول العلاجي الموحد من اللجنة متعددة التخصصات.</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl border-t-4 border-cyan shadow text-center">
+                    <div class="w-8 h-8 rounded-full bg-cyan text-white font-bold mx-auto mb-2 flex items-center justify-center text-sm">6</div>
+                    <h4 class="font-bold text-xs text-navy mb-1">بدء العلاج</h4>
+                    <p class="text-[11px] text-slate">التوجيه للجراحة، أو اليوم الواحد للكيماوي، أو الإشعاع.</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl border-t-4 border-terracotta shadow text-center">
+                    <div class="w-8 h-8 rounded-full bg-terracotta text-white font-bold mx-auto mb-2 flex items-center justify-center text-sm">7</div>
+                    <h4 class="font-bold text-xs text-navy mb-1">المتابعة والدعم</h4>
+                    <p class="text-[11px] text-slate">الدعم النفسي، التغذية العلاجية، والمتابعة لمنع الانتكاس.</p>
+                </div>
+            </div>
+
+            <!-- Home Care Advice Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                <div class="bg-white p-6 rounded-xl shadow border-r-4 border-terracotta">
+                    <h3 class="font-bold text-lg text-navy mb-3">إدارة انخفاض المناعة (Neutropenia) للمفقين</h3>
+                    <ul class="space-y-2 text-sm text-slate list-disc list-inside">
+                        <li>قياس درجة حرارة المريض مرتين يومياً بميزان حرارة حراري.</li>
+                        <li>تجنب تقديم الخضروات الورقية النيئة أو اللحوم والأسماك غير تامة الطهي.</li>
+                        <li><strong class="text-terracotta">تنبيه طارئ:</strong> في حال تجاوز الحرارة 38°C، يجب التوجه فوراً لطوارئ المعهد باعتبارها حالة حرجة.</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow border-r-4 border-cyan">
+                    <h3 class="font-bold text-lg text-navy mb-3">إرشادات مكافحة العدوى والزيارات</h3>
+                    <ul class="space-y-2 text-sm text-slate list-disc list-inside">
+                        <li>الالتزام التام بارتداء الكمامات الواقية ذات الطبقات المزدوجة داخل غرف العلاج.</li>
+                        <li>الامتناع عن إدخال النباتات الطبيعية أو الزهور لغرف العزل وزراعة النخاع.</li>
+                        <li>قصر المرافقة على شخص واحد فقط لمنع التزاحم وتقليل مخاطر انتقال الجراثيم.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Urgent Philanthropy & Time-to-Treatment -->
+        <section id="donations" class="space-y-6">
+            <div class="border-r-4 border-terracotta pr-4">
+                <h2 class="text-2xl md:text-3xl font-bold text-navy">5. جمع التبرعات وحتمية سرعة الإنقاذ العلاجي</h2>
+                <p class="text-slate text-sm md:text-base mt-1">
+                    تغطي أموال التبرعات نحو 70% من المنصرف السنوي الفعلي لشراء الأدوية الموجهة والمناعية باهظة التكلفة وتوفير المستلزمات الجراحية.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- Funding Source Pie Chart -->
+                <div class="lg:col-span-5 bg-white p-6 rounded-xl shadow border border-gray-100">
+                    <h3 class="text-lg font-bold text-navy mb-2 text-center">مصادر الميزانية التشغيلية والعلاجية</h3>
+                    <p class="text-xs text-slate text-center mb-4">أهمية التبرعات المجتمعية في استدامة تقديم الخدمة الطبية</p>
+                    
+                    <div class="chart-container">
+                        <canvas id="fundingChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Donation Callout Cards -->
+                <div class="lg:col-span-7 space-y-4">
+                    <div class="bg-navy text-white p-6 rounded-2xl shadow-xl relative overflow-hidden">
+                        <div class="relative z-10 space-y-3">
+                            <span class="bg-terracotta text-white font-bold px-3 py-1 rounded-full text-xs">مبدأ حتمية الوقت (Time-to-Treatment)</span>
+                            <h3 class="text-2xl font-black">كل دقيقة تؤثر في فرصة الشفاء</h3>
+                            <p class="text-sm opacity-90 leading-relaxed">
+                                السرطان مرض ديناميكي؛ والتأخر في توفير الدواء أو حجز غرفة العمليات قد يؤدي لتضاعف حجم الورم. تبرعك المباشر يقلص قوائم الانتظار ويبدأ العلاج في النافذة الزمنية الحرجة للمريض.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Official Accounts Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                            <h4 class="font-extrabold text-navy text-lg mb-1">المعهد الرئيسي وفم الخليج</h4>
+                            <div class="text-terracotta font-black text-xl mb-1">حساب 777</div>
+                            <p class="text-xs text-slate">بجميع البنوك المصرية والبريد المصري</p>
+                            <p class="text-xs text-slate mt-1">رسائل SMS: أرسل "777" إلى <strong class="text-navy">9797</strong></p>
+                            <p class="text-xs text-slate">الخط الساخن: <strong class="text-navy">19514</strong> | إنستاباي & فوري (كود 777)</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                            <h4 class="font-extrabold text-navy text-lg mb-1">مستشفى 500 500 الجديد</h4>
+                            <div class="text-cyan font-black text-xl mb-1">حساب 500500</div>
+                            <p class="text-xs text-slate">بجميع البنوك المصرية والبريد المصري</p>
+                            <p class="text-xs text-slate mt-1">رسائل SMS: أرسل "500500" إلى <strong class="text-navy">9500</strong></p>
+                            <p class="text-xs text-slate">الخط الساخن: <strong class="text-navy">16115</strong> | تطبيق ماي فوري & إنستاباي</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Digital Strategy & Internal Displays -->
+        <section class="space-y-6">
+            <div class="border-r-4 border-cyan pr-4">
+                <h2 class="text-2xl md:text-3xl font-bold text-navy">6. استراتيجية المحتوى الرقمي والبث الداخلي</h2>
+                <p class="text-slate text-sm md:text-base mt-1">
+                    تتوزع السياسة التحريرية عبر المنصات الرقمية الرسمية وشاشات الانتظار الداخلية بالمستشفيات لضمان التوعية المستمرة.
+                </p>
+            </div>
+
+            <!-- Matrix Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Social Media Plan -->
+                <div class="bg-white p-6 rounded-xl shadow border border-gray-100 space-y-4">
+                    <h3 class="font-bold text-xl text-navy flex items-center justify-between">
+                        <span>منصات التواصل الاجتماعي</span>
+                        <span class="text-xs font-normal text-cyan bg-offwhite px-2 py-1 rounded">خطة النشر الأسبوعية</span>
+                    </h3>
+                    <div class="space-y-3 text-sm">
+                        <div class="p-3 bg-offwhite rounded-lg">
+                            <strong class="text-navy">فيسبوك (المنصة المركزية - 4-5 منشورات):</strong> إنفوجرافيك خدمي، أدلة العيادات، حملات التبرع، وتغطيات المبادرات الرئاسية.
+                        </div>
+                        <div class="p-3 bg-offwhite rounded-lg">
+                            <strong class="text-navy">يوتيوب (فيديو مطول أسبوعياً + Shorts):</strong> لقاءات معمقة مع أساتذة المعهد، جولات بالأقسام الحديثة، وشرح التقنيات الجراحية.
+                        </div>
+                        <div class="p-3 bg-offwhite rounded-lg">
+                            <strong class="text-navy">إنستغرام (3 منشورات + قصص يومية):</strong> بطاقات كاروسيل توعوية سريعة، رسائل أمل مصورة لمتعافين، وإرشادات الوقاية للشباب.
+                        </div>
+                        <div class="p-3 bg-offwhite rounded-lg">
+                            <strong class="text-navy">لينكد إن (منشورين أسبوعياً):</strong> أوراق بحثية، إحصائيات المؤتمرات، وجذب الشراكات مع المسؤولية المجتمعية للشركات (CSR).
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Internal Broadcast Loop -->
+                <div class="bg-white p-6 rounded-xl shadow border border-gray-100 space-y-4">
+                    <h3 class="font-bold text-xl text-navy flex items-center justify-between">
+                        <span>دورة البث الداخلي للشاشات (30 دقيقة)</span>
+                        <span class="text-xs font-normal text-terracotta bg-offwhite px-2 py-1 rounded">صالات الانتظار</span>
+                    </h3>
+                    <div class="space-y-2 text-xs md:text-sm">
+                        <div class="flex items-center gap-3 p-2 border-b border-gray-100">
+                            <span class="font-bold text-navy bg-gray-100 px-2 py-1 rounded">00 - 05 د</span>
+                            <span class="text-slate">رسوم موشن جرافيكس حركية ثلاثية الأبعاد لإرشاد المريض لمنافذ الدواء ولجان نفقة الدولة.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-2 border-b border-gray-100">
+                            <span class="font-bold text-cyan bg-gray-100 px-2 py-1 rounded">05 - 12 د</span>
+                            <span class="text-slate">نصائح تغذوية لتقليل الغثيان والإجهاد، وإرشادات السلامة عند انخفاض المناعة.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-2 border-b border-gray-100">
+                            <span class="font-bold text-navy bg-gray-100 px-2 py-1 rounded">12 - 20 د</span>
+                            <span class="text-slate">لقاءات مسجلة مع أطباء المعهد تجيب باقتضاب عن المخاوف الشائعة للعلاج الإشعاعي والكيماوي.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-2 border-b border-gray-100">
+                            <span class="font-bold text-terracotta bg-gray-100 px-2 py-1 rounded">20 - 25 د</span>
+                            <span class="text-slate">رسائل مصورة لمتعافين وتمرينات تنفس واسترخاء موجهة لتخفيف التوتر في صالات الانتظار.</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-2">
+                            <span class="font-bold text-navy bg-gray-100 px-2 py-1 rounded">25 - 30 د</span>
+                            <span class="text-slate">ومضات وثائقية تبرز كيف أسهمت التبرعات في شراء أجهزة الرنين والمسرعات الخطية بالمعهد.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-white mt-12 border-t-4 border-terracotta">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-right">
+            <div>
+                <h4 class="font-bold text-lg mb-1">المعهد القومي للأورام – جامعة القاهرة</h4>
+                <p class="text-xs text-cyan">1 شارع قصر العيني، ميدان فم الخليج، القاهرة | الخط الساخن: 19514 / 16115</p>
+            </div>
+            <div class="text-xs text-gray-300">
+                جميع حقوق النشر محفوظة © 2026 | وثيقة استراتيجية المحتوى والتواصل المؤسسي
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Charts Initialization Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            // Global Chart Defaults
+            Chart.defaults.font.family = "'Tajawal', 'Cairo', sans-serif";
+            Chart.defaults.color = '#4A5568';
+
+            // Utility function for label multiline wrapping (> 16 chars)
+            function formatLabel(label) {
+                if (typeof label === 'string' && label.length > 16) {
+                    const words = label.split(' ');
+                    const lines = [];
+                    let currentLine = '';
+
+                    words.forEach(word => {
+                        if ((currentLine + ' ' + word).trim().length <= 16) {
+                            currentLine = (currentLine + ' ' + word).trim();
+                        } else {
+                            if (currentLine) lines.push(currentLine);
+                            currentLine = word;
+                        }
+                    });
+                    if (currentLine) lines.push(currentLine);
+                    return lines;
+                }
+                return label;
+            }
+
+            // Standard Tooltip Callback Plugin Config
+            const tooltipConfig = {
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                    return label.join(' ');
+                                } else {
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            };
+
+            // Chart 1: Facilities & Capacity Comparison (Bar Chart)
+            const ctx1 = document.getElementById('facilitiesChart').getContext('2d');
+            const facilityLabels = [
+                'المستشفى الرئيسي (فم الخليج)',
+                'مستشفى أورام الثدي (التجمع)',
+                'معهد 500 500 (الشيخ زايد)'
+            ].map(formatLabel);
+
+            new Chart(ctx1, {
+                type: 'bar',
+                data: {
+                    labels: facilityLabels,
+                    datasets: [
+                        {
+                            label: 'عدد الأسرة الداخلي',
+                            data: [496, 120, 360],
+                            backgroundColor: '#0B3C5D',
+                            borderRadius: 6
+                        },
+                        {
+                            label: 'أسرّة علاج اليوم الواحد / العيادات',
+                            data: [150, 55, 180],
+                            backgroundColor: '#328CC1',
+                            borderRadius: 6
+                        },
+                        {
+                            label: 'غرف العمليات الكبرى',
+                            data: [16, 6, 21],
+                            backgroundColor: '#C27D38',
+                            borderRadius: 6
+                        }
+                    ]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    responsive: true,
+                    plugins: tooltipConfig.plugins,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: '#E2E8F0' }
+                        },
+                        x: {
+                            grid: { display: false }
+                        }
+                    }
+                }
+            });
+
+            // Chart 2: Cancer Types Distribution (Doughnut Chart)
+            const ctx2 = document.getElementById('cancerTypeChart').getContext('2d');
+            const cancerLabels = [
+                'أورام الثدي (الإناث)',
+                'أورام الكبد والجهاز الهضمي',
+                'أورام الرئة والصدر',
+                'أورام القولون والمستقيم',
+                'أورام الدم والليمفوما',
+                'أنواع أخرى متنوعة'
+            ].map(formatLabel);
+
+            new Chart(ctx2, {
+                type: 'doughnut',
+                data: {
+                    labels: cancerLabels,
+                    datasets: [{
+                        data: [35, 20, 15, 15, 10, 5],
+                        backgroundColor: [
+                            '#C27D38',
+                            '#0B3C5D',
+                            '#328CC1',
+                            '#4A5568',
+                            '#818CF8',
+                            '#CBD5E1'
+                        ],
+                        borderWidth: 2,
+                        borderColor: '#FFFFFF'
+                    }]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    responsive: true,
+                    plugins: {
+                        ...tooltipConfig.plugins,
+                        legend: {
+                            position: 'bottom',
+                            labels: { boxWidth: 12, padding: 15 }
+                        }
+                    }
+                }
+            });
+
+            // Chart 3: Survival Rate Comparison (Bar Chart)
+            const ctx3 = document.getElementById('survivalRateChart').getContext('2d');
+            const survivalLabels = [
+                'سرطان الثدي',
+                'سرطان القولون',
+                'سرطان البروستاتا',
+                'سرطان عنق الرحم'
+            ].map(formatLabel);
+
+            new Chart(ctx3, {
+                type: 'bar',
+                data: {
+                    labels: survivalLabels,
+                    datasets: [
+                        {
+                            label: 'نسبة الشفاء بالكشف المبكر (المرحلة 1)',
+                            data: [95, 90, 98, 92],
+                            backgroundColor: '#328CC1',
+                            borderRadius: 6
+                        },
+                        {
+                            label: 'نسبة الشفاء بالتشخيص المتأخر (المرحلة 4)',
+                            data: [25, 14, 30, 17],
+                            backgroundColor: '#4A5568',
+                            borderRadius: 6
+                        }
+                    ]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    responsive: true,
+                    plugins: tooltipConfig.plugins,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: {
+                                callback: function(value) { return value + '%'; }
+                            },
+                            grid: { color: '#E2E8F0' }
+                        },
+                        x: {
+                            grid: { display: false }
+                        }
+                    }
+                }
+            });
+
+            // Chart 4: Budget Funding Sources (Pie Chart)
+            const ctx4 = document.getElementById('fundingChart').getContext('2d');
+            const fundingLabels = [
+                'تبرعات المجتمع والشركات (حساب 777 و500500)',
+                'الدعم والميزانية الحكومية المباشرة'
+            ].map(formatLabel);
+
+            new Chart(ctx4, {
+                type: 'pie',
+                data: {
+                    labels: fundingLabels,
+                    datasets: [{
+                        data: [70, 30],
+                        backgroundColor: [
+                            '#C27D38',
+                            '#0B3C5D'
+                        ],
+                        borderWidth: 2,
+                        borderColor: '#FFFFFF'
+                    }]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    responsive: true,
+                    plugins: {
+                        ...tooltipConfig.plugins,
+                        legend: {
+                            position: 'bottom',
+                            labels: { boxWidth: 12, padding: 15 }
+                        }
+                    }
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>
