@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خطة الميديا باير والتموضع الإعلاني - د. عبدالله الجندي (PDF)</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+
+        /* Page Layout & PDF Formatting Controls */
+        @page {
+            size: A4 portrait;
+            margin: 12mm 15mm 15mm 15mm;
+        }
+
+        @media print {
+            body {
+                background-color: #ffffff !important;
+                color: #000000 !important;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .page-break {
+                page-break-before: always;
+            }
+            .avoid-break {
+                page-break-inside: avoid;
+            }
+            .pdf-card {
+                box-shadow: none !important;
+                border: 1px solid #cbd5e1 !important;
+            }
+            a {
+                text-decoration: none !important;
+                color: inherit !important;
+            }
+        }
+
+        .pdf-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8 md:p-12 min-h-screen">
+
+    <!-- Top Floating Print / PDF Toolbar (Hidden on Print) -->
+    <div class="no-print fixed top-5 left-5 right-5 z-50 max-w-5xl mx-auto bg-slate-900/90 backdrop-blur-md text-white p-4 rounded-2xl shadow-2xl flex items-center justify-between border border-slate-700">
+        <div class="flex items-center space-x-3 space-x-reverse">
+            <span class="text-2xl">📄</span>
+            <div>
+                <h3 class="font-bold text-sm sm:text-base">جاهز للتصدير كـ PDF</h3>
+                <p class="text-xs text-slate-300">اضغط على الزر أدناه ثم اختر "حفظ بتنسيق PDF" (Save as PDF)</p>
+            </div>
+        </div>
+        <button onclick="window.print()" class="bg-blue-600 hover:bg-blue-500 text-white text-xs sm:text-sm font-bold px-5 py-2.5 rounded-xl transition flex items-center space-x-2 space-x-reverse shadow-lg cursor-pointer">
+            <span>🖨️ طباعة / حفظ PDF</span>
+        </button>
+    </div>
+
+    <!-- Main Printable PDF Container -->
+    <div class="max-w-4xl mx-auto bg-white p-6 sm:p-10 rounded-2xl shadow-xl border border-slate-200 mt-16 sm:mt-12">
+
+        <!-- PDF Document Header -->
+        <header class="border-b-4 border-blue-700 pb-6 mb-8">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                <div>
+                    <span class="bg-blue-100 text-blue-900 text-xs font-black px-3 py-1 rounded-md uppercase tracking-wider">خطة إستراتيجية تشغيلية</span>
+                    <h1 class="text-2xl sm:text-3xl font-black text-slate-900 mt-2">خطة الميديا باير والتموضع الإعلاني</h1>
+                    <p class="text-base font-bold text-blue-700 mt-1">د. عبدالله الجندي - أخصائي جراحات التجميل ونحت القوام</p>
+                </div>
+                <div class="text-right sm:text-left text-xs text-slate-500 space-y-1">
+                    <p><strong>المدة:</strong> 14 يوماً تشغيلية</p>
+                    <p><strong>النطاق:</strong> الجيزة (المهندسين & 6 أكتوبر)</p>
+                    <p><strong>الميزانية:</strong> 60,000 - 120,000 ج.م</p>
+                    <p><strong>التاريخ:</strong> أكتوبر 2026</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Executive Summary Cards -->
+        <section class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8 avoid-break">
+            <div class="pdf-card p-4 bg-slate-50">
+                <span class="text-xs font-bold text-slate-500 block">الهدف الرئيسي</span>
+                <span class="text-sm font-black text-slate-900">توليد حجز كشوفات</span>
+            </div>
+            <div class="pdf-card p-4 bg-slate-50">
+                <span class="text-xs font-bold text-slate-500 block">المنصات المستهدفة</span>
+                <span class="text-sm font-black text-blue-700">Meta & TikTok</span>
+            </div>
+            <div class="pdf-card p-4 bg-slate-50">
+                <span class="text-xs font-bold text-slate-500 block">قناة التحويل الرسمية</span>
+                <span class="text-sm font-black text-emerald-700">WhatsApp Direct</span>
+            </div>
+            <div class="pdf-card p-4 bg-slate-50">
+                <span class="text-xs font-bold text-slate-500 block">تكلفة محادثة واتساب</span>
+                <span class="text-sm font-black text-amber-700">85 - 160 ج.م</span>
+            </div>
+        </section>
+
+        <!-- SECTION 1: Operational Analysis -->
+        <section class="mb-10 avoid-break">
+            <h2 class="text-lg font-bold text-slate-900 border-r-4 border-blue-600 pr-3 mb-4 bg-slate-100 py-1 rounded-l">
+                1. التحليل التشغيلي للأصول الرقمية والتموضع المهني
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed mb-4 text-justify">
+                يرتكز النجاح الإعلاني في تسويق الجراحة التجميلية على تفكيك حاجز التردد العالي لدى المريض المحتمل، حيث يصنف هذا القطاع ضمن الخدمات العلاجية مرتفعة القيمة والحساسية النفسية. يمتلك الدكتور عبدالله الجندي ثقلاً أكاديمياً وعيادياً متميزاً يمنحه أفضلية تنافسية داخل السوق المصري.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
+                <div class="pdf-card p-4 bg-blue-50/50 border-blue-200">
+                    <h3 class="font-bold text-xs text-blue-900 mb-1">🎓 الاعتمادات الأكاديمية والموثوقية السريرية</h3>
+                    <ul class="text-xs text-slate-700 space-y-1">
+                        <li>• ماجستير الجراحة من كلية الجراحين الملكية بأيرلندا (RCSI)</li>
+                        <li>• بكالوريوس الطب والجراحة من كلية طب قصر العيني</li>
+                        <li>• تسجيل المجلس الطبي العام بالمملكة المتحدة (GMC)</li>
+                        <li>• عضوية الجمعيتين المصرية والأمريكية لجراحي التجميل</li>
+                    </ul>
+                </div>
+                <div class="pdf-card p-4 bg-emerald-50/50 border-emerald-200">
+                    <h3 class="font-bold text-xs text-emerald-900 mb-1">📍 التمركز الميداني والتغطية الجغرافية</h3>
+                    <ul class="text-xs text-slate-700 space-y-1">
+                        <li>• <strong>عيادة المهندسين:</strong> شارع البطل أحمد عبدالعزيز</li>
+                        <li>• <strong>عيادة 6 أكتوبر:</strong> المحور المركزي</li>
+                        <li>• <strong>نطاق الاستهداف:</strong> شعاع 10-15 كم حول العيادتين</li>
+                        <li>• <strong>المناطق المستهدفة:</strong> الشيخ زايد، الدقي، والزمالك</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pdf-card p-4 bg-rose-50 border-rose-200 text-xs text-rose-950 mt-3">
+                <strong>🚨 القرار التكتيكي لحالة حساب إنستغرام:</strong>
+                نظرًا للتعليق المؤقت لحساب إنستغرام، يتم توجيه حركة زيارات ميتا حصراً نحو إعلانات واتساب للأعمال ونماذج فيسبوك التلقائية لحين قبول الطعن، منيعاً لتبديد الميزانية على واجهات غير مستقرة.
+            </div>
+        </section>
+
+        <!-- SECTION 2: 14-Day Funnel Architecture -->
+        <section class="mb-10 avoid-break">
+            <h2 class="text-lg font-bold text-slate-900 border-r-4 border-blue-600 pr-3 mb-4 bg-slate-100 py-1 rounded-l">
+                2. الهندسة التشغيلية للقمع الإعلاني (14 يوماً)
+            </h2>
+
+            <div class="space-y-3">
+                <div class="pdf-card p-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+                    <div class="w-28 flex-shrink-0 bg-blue-600 text-white font-bold text-center text-xs py-1.5 rounded-md">
+                        الأيام 1 - 4<br><span class="text-[10px] font-normal">ToFu (أعلى القمع)</span>
+                    </div>
+                    <div class="text-xs text-slate-700 flex-1">
+                        <strong class="text-slate-900 block mb-0.5">التأسيس الخوارزمي والسلطة الطبية</strong>
+                        حملات مشاهدات فيديو مكثفة لبناء الوعي الجغرافي المركز، وتفكيك خرافات التثدي للرجال ونحت القوام للنساء لتجميع مشاهدي +50%.
+                    </div>
+                </div>
+
+                <div class="pdf-card p-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+                    <div class="w-28 flex-shrink-0 bg-teal-600 text-white font-bold text-center text-xs py-1.5 rounded-md">
+                        الأيام 5 - 9<br><span class="text-[10px] font-normal">MoFu (وسط القمع)</span>
+                    </div>
+                    <div class="text-xs text-slate-700 flex-1">
+                        <strong class="text-slate-900 block mb-0.5">تفكيك المخاوف والتردد السريري</strong>
+                        إعادة استهداف حصري لمشاهدي 50% فأكثر من المرحلة الأولى بمحتوى يركز على إجراءات الأمان، التخدير، مدة التعافي والعودة للعمل.
+                    </div>
+                </div>
+
+                <div class="pdf-card p-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+                    <div class="w-28 flex-shrink-0 bg-amber-500 text-white font-bold text-center text-xs py-1.5 rounded-md">
+                        الأيام 10 - 14<br><span class="text-[10px] font-normal">BoFu (أسفل القمع)</span>
+                    </div>
+                    <div class="text-xs text-slate-700 flex-1">
+                        <strong class="text-slate-900 block mb-0.5">الحصاد التسويقي وتوليد الحجوزات</strong>
+                        حملات تحويل مباشر لمراسلة واتساب ونماذج الحجز المؤهلة الموجهة للشرائح الدافئة والجمهور المشابه (Lookalike 1%).
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page Break for PDF Export -->
+        <div class="page-break"></div>
+
+        <!-- SECTION 3: Budget Scenarios & Expected Outcomes -->
+        <section class="mb-10 avoid-break pt-4">
+            <h2 class="text-lg font-bold text-slate-900 border-r-4 border-blue-600 pr-3 mb-4 bg-slate-100 py-1 rounded-l">
+                3. سيناريوهات الميزانية وتوقعات العائد الإعلاني
+            </h2>
+
+            <p class="text-xs text-slate-600 mb-4">توزيع الإنفاق بين المنصات والإسقاطات الرقمية للنتائج المتوقعة خلال أسبوعين:</p>
+
+            <!-- Table 1: Budget Allocation -->
+            <div class="overflow-x-auto mb-6">
+                <table class="w-full text-right border-collapse text-xs">
+                    <thead>
+                        <tr class="bg-slate-900 text-white">
+                            <th class="p-2.5 border border-slate-700">المنصة الإعلانية</th>
+                            <th class="p-2.5 border border-slate-700">فئة الميزانية</th>
+                            <th class="p-2.5 border border-slate-700">الحصة</th>
+                            <th class="p-2.5 border border-slate-700">الإجمالي (ج.م)</th>
+                            <th class="p-2.5 border border-slate-700">اليومي (ج.م)</th>
+                            <th class="p-2.5 border border-slate-700">التوزيع التكتيكي الداخلي</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200 text-slate-800">
+                        <tr class="bg-slate-50">
+                            <td class="p-2.5 font-bold border">Meta (Facebook/WhatsApp)</td>
+                            <td class="p-2.5 border">متوسطة</td>
+                            <td class="p-2.5 border">70%</td>
+                            <td class="p-2.5 font-bold border">42,000</td>
+                            <td class="p-2.5 border">3,000</td>
+                            <td class="p-2.5 border">30% سلطة / 70% واتساب ونماذج</td>
+                        </tr>
+                        <tr>
+                            <td class="p-2.5 font-bold border">Meta (Facebook/WhatsApp)</td>
+                            <td class="p-2.5 border">مرتفعة</td>
+                            <td class="p-2.5 border">67%</td>
+                            <td class="p-2.5 font-bold border">80,000</td>
+                            <td class="p-2.5 border">5,714</td>
+                            <td class="p-2.5 border">25% انتشار / 75% محادثات حجز</td>
+                        </tr>
+                        <tr class="bg-slate-50">
+                            <td class="p-2.5 font-bold border">TikTok Platform</td>
+                            <td class="p-2.5 border">متوسطة</td>
+                            <td class="p-2.5 border">30%</td>
+                            <td class="p-2.5 font-bold border">18,000</td>
+                            <td class="p-2.5 border">1,285</td>
+                            <td class="p-2.5 border">60% مشاهدات / 40% تفاعل بروفايل</td>
+                        </tr>
+                        <tr>
+                            <td class="p-2.5 font-bold border">TikTok Platform</td>
+                            <td class="p-2.5 border">مرتفعة</td>
+                            <td class="p-2.5 border">33%</td>
+                            <td class="p-2.5 font-bold border">40,000</td>
+                            <td class="p-2.5 border">2,857</td>
+                            <td class="p-2.5 border">50% Spark Ads / 50% تحويلات</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Table 2: KPI Predictions -->
+            <div class="overflow-x-auto">
+                <table class="w-full text-right border-collapse text-xs">
+                    <thead>
+                        <tr class="bg-blue-900 text-white">
+                            <th class="p-2.5 border border-blue-800">مقياس الأداء الرئيسي (KPI)</th>
+                            <th class="p-2.5 border border-blue-800">الميزانية المتوسطة (60k ج.م)</th>
+                            <th class="p-2.5 border border-blue-800">الميزانية المرتفعة (120k ج.م)</th>
+                            <th class="p-2.5 border border-blue-800">الدلالة التحليلية</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200 text-slate-800">
+                        <tr>
+                            <td class="p-2.5 font-bold border">إجمالي مرات الظهور (Impressions)</td>
+                            <td class="p-2.5 border">850,000 - 1,150,000</td>
+                            <td class="p-2.5 border">1,750,000 - 2,400,000</td>
+                            <td class="p-2.5 border">تشبع بصري وتكرار ظهور صحي</td>
+                        </tr>
+                        <tr class="bg-slate-50">
+                            <td class="p-2.5 font-bold border">مشاهدات الفيديو (Video Views)</td>
+                            <td class="p-2.5 border">460,000 - 620,000</td>
+                            <td class="p-2.5 border">980,000 - 1,350,000</td>
+                            <td class="p-2.5 border">بناء مخزون جماهير مخصصة</td>
+                        </tr>
+                        <tr>
+                            <td class="p-2.5 font-bold border">النقرات النوعية (Link Clicks)</td>
+                            <td class="p-2.5 border">11,500 - 16,500</td>
+                            <td class="p-2.5 border">23,500 - 35,000</td>
+                            <td class="p-2.5 border">معدل CTR متوقع: 1.35% - 1.85%</td>
+                        </tr>
+                        <tr class="bg-slate-50">
+                            <td class="p-2.5 font-bold border">محادثات واتساب المؤهلة</td>
+                            <td class="p-2.5 font-bold text-blue-700 border">270 - 390 محادثة</td>
+                            <td class="p-2.5 font-bold text-blue-700 border">560 - 830 محادثة</td>
+                            <td class="p-2.5 border">تكلفة المحادثة: 85 - 160 ج.م</td>
+                        </tr>
+                        <tr class="bg-amber-50">
+                            <td class="p-2.5 font-bold border text-amber-900">الكشوفات المؤكدة بالعيادة</td>
+                            <td class="p-2.5 font-bold text-amber-900 border">40 - 75 كشفاً</td>
+                            <td class="p-2.5 font-bold text-amber-900 border">95 - 170 كشفاً</td>
+                            <td class="p-2.5 border">بناء على معدل تحويل السكرتارية 15%-22%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Creative Matrix & Ad Scripts -->
+        <section class="mb-10 avoid-break">
+            <h2 class="text-lg font-bold text-slate-900 border-r-4 border-blue-600 pr-3 mb-4 bg-slate-100 py-1 rounded-l">
+                4. الزوايا الإبداعية والنصوص الإعلانية
+            </h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <!-- Ad Script 1 -->
+                <div class="pdf-card p-4">
+                    <span class="bg-blue-100 text-blue-800 text-[10px] font-bold px-2 py-0.5 rounded mb-2 inline-block">حملة التثدي للرجال</span>
+                    <h3 class="font-bold text-xs text-slate-900 mb-1">تفكيك خرافة الرياضة والجيم</h3>
+                    <p class="text-[11px] text-slate-700 leading-relaxed mb-2">
+                        <strong>العنوان:</strong> تخلص نهائياً من التثدي بحلول جراحية دقيقة وأعلى معايير الأمان مع د. عبدالله الجندي.<br>
+                        <strong>النص:</strong> مشكلة التثدي لا ترتبط دائماً بزيادة الوزن؛ فوجود تضخم غدي حقيقي يعني أن الرياضة لن تحقق النتيجة بمفردها. نعتمد على بروتوكولات جراحية دقيقة لإزالة الغدة وتنسيق المظهر في إجراء يوم واحد بأعلى درجات الأمان.
+                    </p>
+                    <span class="text-[10px] font-bold text-blue-600">CTA: مراسلة عبر واتساب</span>
+                </div>
+
+                <!-- Ad Script 2 -->
+                <div class="pdf-card p-4">
+                    <span class="bg-teal-100 text-teal-800 text-[10px] font-bold px-2 py-0.5 rounded mb-2 inline-block">حملة نحت القوام</span>
+                    <h3 class="font-bold text-xs text-slate-900 mb-1">الأمان والخبرة التشريحية</h3>
+                    <p class="text-[11px] text-slate-700 leading-relaxed mb-2">
+                        <strong>العنوان:</strong> نحت القوام المتقدم برؤية جراحية معتمدة مع د. عبدالله الجندي.<br>
+                        <strong>النص:</strong> نجاح الجراحة لا يقاس بالتغيير الجذري بل بقدرتها على إبراز التناسق الطبيعي لقوام الجسم بدقة. تتيح تقنيات الفيزر الحديثة استهداف التراكمات الدهنية مع شد الجلد وتحفيز تعافيه السريع تحت إشراف جراحي متخصص.
+                    </p>
+                    <span class="text-[10px] font-bold text-teal-600">CTA: مراسلة عبر واتساب</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: Policy Compliance Rules -->
+        <section class="mb-10 avoid-break">
+            <h2 class="text-lg font-bold text-slate-900 border-r-4 border-blue-600 pr-3 mb-4 bg-slate-100 py-1 rounded-l">
+                5. إدارة الامتثال والسياسات الإعلانية
+            </h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                <div class="pdf-card p-4 border-emerald-300 bg-emerald-50/30">
+                    <h3 class="font-bold text-emerald-900 mb-2">✅ الضوابط المعتمدة</h3>
+                    <ul class="space-y-1.5 text-slate-700">
+                        <li>• تقييد عمري إجباري لحملات التجميل (18+ عاماً).</li>
+                        <li>• طرح تثقيفي متزن يركز على التقنيات والاعتمادات.</li>
+                        <li>• ترويج المقاطع العضوية عبر TikTok Spark Ads.</li>
+                        <li>• عرض كتالوجات قبل وبعد فقط داخل محادثات واتساب.</li>
+                    </ul>
+                </div>
+                <div class="pdf-card p-4 border-rose-300 bg-rose-50/30">
+                    <h3 class="font-bold text-rose-900 mb-2">❌ المحظورات وتجنب الحظر</h3>
+                    <ul class="space-y-1.5 text-slate-700">
+                        <li>• تجنب إثارة الشعور بالنقص الجسدي أو الإحراج.</li>
+                        <li>• استبعاد صور قبل وبعد المباشرة من الممول.</li>
+                        <li>• عدم وضع روابط إنستغرام المعلقة داخل الإعلانات.</li>
+                        <li>• الابتعاد عن الوعود الطبية القاطعة غير المتزنة.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: Executive Recommendations -->
+        <section class="pdf-card p-6 bg-slate-900 text-white avoid-break">
+            <h2 class="text-base font-bold text-amber-400 mb-3">🚀 التوصيات التنفيذية لخبير الميديا باير</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs leading-relaxed text-slate-300">
+                <div>
+                    <strong class="text-white block mb-1">1. سرعة الاستجابة (Speed to Lead)</strong>
+                    الرد خلال أقل من 15 دقيقة يمنع فقدان أكثر من 50% من قيمة المحادثات التحويلية على واتساب.
+                </div>
+                <div>
+                    <strong class="text-white block mb-1">2. الفصل التشغيلي للمسارات</strong>
+                    فصل حملات الجراحات الكبرى (نحت وتثدي) عن الإجراءات العيادية الخفيفة لاختلاف سلوك المريض.
+                </div>
+                <div>
+                    <strong class="text-white block mb-1">3. تكتيك Spark Ads الافتراضي</strong>
+                    اعتماد ترويج مقاطع تيك توك العضوية لرفع التفاعل بنسبة 142% وبناء قاعدة متابعين دائمة.
+                </div>
+            </div>
+        </section>
+
+        <!-- Document Footer -->
+        <footer class="mt-8 pt-4 border-t border-slate-200 text-center text-xs text-slate-500">
+            <p>خطة الميديا باير والتموضع الإعلاني - د. عبدالله الجندي © 2026. مستند رسمي معد للطباعة والحفظ.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
