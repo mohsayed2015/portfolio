@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خطة الميديا باير والتموضع الإعلاني - د. عبدالله الجندي</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Google Fonts: Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#0f172a',
+                            blue: '#1e40af',
+                            accent: '#2563eb',
+                            teal: '#0d9488',
+                            gold: '#f59e0b',
+                            rose: '#e11d48',
+                            light: '#f8fafc',
+                            card: '#ffffff'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f1f5f9;
+            color: #0f172a;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            height: 320px;
+            max-height: 380px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-900 min-h-screen">
+
+    <!--
+    CONFIRMATION:
+    - Mermaid JS was NOT used in this output.
+    - SVG graphics were NOT used in this output.
+    - Palette Name: Vibrant Medical Tech & High-Contrast Analytics (Royal Blue, Teal, Amber, Slate)
+    - Strategic Narrative Plan:
+      1. Header & Credentials Overview
+      2. Strategic Assets & Channel Tactic (Meta WhatsApp Pivot)
+      3. 14-Day Funnel Steps (ToFu -> MoFu -> BoFu)
+      4. Budget Split (60k vs 120k EGP) & Performance Metrics (Chart.js)
+      5. Channel CPM & Conversion Performance (Chart.js)
+      6. Creative Script Matrix
+      7. Policy Compliance & Safety Checklist
+    - Visualization Choices:
+      1. Budget Allocation -> Goal: Compare Composition -> Chart.js Doughnut Chart -> High visibility of Meta vs TikTok split.
+      2. KPI Projections -> Goal: Compare Outcomes -> Chart.js Bar Chart -> Clear mid vs high budget contrast.
+      3. Platform CPM & CPL -> Goal: Compare Rates -> Chart.js Horizontal Bar Chart -> Highlights TikTok's lower CPM vs Meta's strong CPL.
+      4. Funnel Dropoff -> Goal: Organize & Track Conversion -> Chart.js Bar Chart -> Visualizes user journey from Impression to Clinic Visit.
+    -->
+
+    <!-- Top Navigation Header -->
+    <header class="bg-slate-900 text-white border-b-4 border-blue-600 sticky top-0 z-50 shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="flex items-center space-x-3 space-x-reverse">
+                    <span class="text-3xl">🩺</span>
+                    <div>
+                        <h1 class="text-xl sm:text-2xl font-black text-white tracking-wide">خطة الميديا باير والتموضع الإعلاني</h1>
+                        <p class="text-xs sm:text-sm text-blue-400 font-semibold">د. عبدالله الجندي - أخصائي جراحات التجميل ونحت القوام</p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center gap-2">
+                    <span class="bg-blue-900/80 text-blue-200 border border-blue-700 text-xs px-3 py-1.5 rounded-full font-bold">⏱️ الخطة: 14 يوماً</span>
+                    <span class="bg-teal-900/80 text-teal-200 border border-teal-700 text-xs px-3 py-1.5 rounded-full font-bold">🏥 المهندسين & 6 أكتوبر</span>
+                    <span class="bg-amber-900/80 text-amber-200 border border-amber-700 text-xs px-3 py-1.5 rounded-full font-bold">💰 الميزانية: 60k - 120k ج.م</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
+
+        <!-- SECTION 1: Credentials & Digital Assets Analysis -->
+        <section class="space-y-4">
+            <div class="border-r-4 border-blue-600 pr-3">
+                <h2 class="text-2xl font-bold text-slate-900">التحليل التشغيلي للأصول الرقمية والتموضع المهني</h2>
+                <p class="text-sm text-slate-600">تسخير السلطة الطبية والأصول الميدانية لخفض تكلفة الاستحواذ وتجاوز التحديات التقنية.</p>
+            </div>
+
+            <!-- Stats & Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+                <!-- Academic Credentials -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition p-5 border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="text-2xl">🎓</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2.5 py-1 rounded">الموثوقية الطبية</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">الاعتمادات الدولية والمحلية</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            ماجستير الجراحة من كلية الجراحين الملكية بأيرلندا (RCSI)، بكالوريوس قصر العيني، تسجيل المجلس الطبي البريطاني (GMC)، وعضوية الجمعيتين المصرية والأمريكية لجراحي التجميل.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-100 text-xs font-bold text-blue-600">
+                        تستخدم كزاوية أمان إعلانية تخفض CTR التردد
+                    </div>
+                </div>
+
+                <!-- Geographical Scope -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition p-5 border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="text-2xl">📍</span>
+                            <span class="bg-teal-100 text-teal-800 text-xs font-bold px-2.5 py-1 rounded">النطاق الجغرافي</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">العيادات والمناطق المستهدفة</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            عيادة المهندسين (شارع البطل أحمد عبدالعزيز) وعيادة 6 أكتوبر (المحور المركزي). استهداف شعاعي (10-15 كم) يتضمن الشيخ زايد، الدقي، والزمالك.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-100 text-xs font-bold text-teal-600">
+                        تركيز جغرافي على شرائح عالية القدرة الشرائية
+                    </div>
+                </div>
+
+                <!-- Surgical Specialties -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition p-5 border border-slate-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="text-2xl">⚡</span>
+                            <span class="bg-amber-100 text-amber-800 text-xs font-bold px-2.5 py-1 rounded">التخصصات الكبرى</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">المسارات العلاجية</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            جراحات نحت القوام بالفيزر، علاج التثدي الجراحي للرجال، شد الترهلات، والإجراءات العيادية الخفيفة (حقن الفيلر، البوتوكس، والليزر).
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-100 text-xs font-bold text-amber-600">
+                        فصل كامل بين مسارات الجراحة والإجراءات الخفيفة
+                    </div>
+                </div>
+
+                <!-- Instagram Tactic -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition p-5 border-2 border-rose-200 bg-rose-50/30 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="text-2xl">🚨</span>
+                            <span class="bg-rose-100 text-rose-800 text-xs font-bold px-2.5 py-1 rounded">إجراء تكتيكي طارئ</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">حالة حساب إنستغرام</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            نظرًا للإيقاف المؤقت لحساب إنستغرام، يتم توجيه حركة زيارات ميتا حصراً نحو إعلانات واتساب للأعمال ونماذج فيسبوك التلقائية لحين حل الطعن الإداري.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-rose-100 text-xs font-bold text-rose-600">
+                        حماية الميزانية من التبديد على واجهات معلقة
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: 14-Day Funnel Architecture -->
+        <section class="space-y-6">
+            <div class="border-r-4 border-teal-600 pr-3">
+                <h2 class="text-2xl font-bold text-slate-900">الهندسة التشغيلية للقمع الإعلاني عبر 14 يوماً</h2>
+                <p class="text-sm text-slate-600">مسار ثلاثي المراحل يراعي طول دورة اتخاذ القرار لدى مريض التجميل ويعظم التحويل.</p>
+            </div>
+
+            <!-- Funnel Timeline Visual -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Step 1: ToFu -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 relative overflow-hidden flex flex-col justify-between">
+                    <div class="absolute -top-3 -left-3 bg-blue-600 text-white text-xs font-black px-4 py-2 rounded-br-xl shadow">
+                        الأيام 1 - 4
+                    </div>
+                    <div>
+                        <div class="flex items-center space-x-2 space-x-reverse mb-4 mt-2">
+                            <span class="bg-blue-100 text-blue-700 font-bold w-8 h-8 rounded-full flex items-center justify-center text-sm">1</span>
+                            <h3 class="font-bold text-lg text-slate-900">أعلى القمع (ToFu)</h3>
+                        </div>
+                        <p class="text-xs font-bold text-blue-600 mb-2">التأسيس الخوارزمي والسلطة الطبية</p>
+                        <ul class="text-xs text-slate-600 space-y-2 mb-4">
+                            <li class="flex items-start">
+                                <span class="ml-1.5 text-blue-500">•</span>
+                                <span>حملات مشاهدات فيديو مكثفة لبناء الوعي الجغرافي.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="ml-1.5 text-blue-500">•</span>
+                                <span>استهداف استباقي واسع بمحيط 10-15 كم حول العيادات.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="ml-1.5 text-blue-500">•</span>
+                                <span>تفكيك خرافات التثدي للرجال ونحت القوام للنساء.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-50 p-3 rounded-lg border border-slate-100 text-xs">
+                        <span class="font-bold text-slate-700 block">الهدف الرقمي:</span>
+                        جمع بيانات المشاهدين وتجميع مشاهدي +50% لتغدية المجموعات القادمة.
+                    </div>
+                </div>
+
+                <!-- Step 2: MoFu -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 relative overflow-hidden flex flex-col justify-between">
+                    <div class="absolute -top-3 -left-3 bg-teal-600 text-white text-xs font-black px-4 py-2 rounded-br-xl shadow">
+                        الأيام 5 - 9
+                    </div>
+                    <div>
+                        <div class="flex items-center space-x-2 space-x-reverse mb-4 mt-2">
+                            <span class="bg-teal-100 text-teal-700 font-bold w-8 h-8 rounded-full flex items-center justify-center text-sm">2</span>
+                            <h3 class="font-bold text-lg text-slate-900">وسط القمع (MoFu)</h3>
+                        </div>
+                        <p class="text-xs font-bold text-teal-600 mb-2">تفكيك المخاوف والتردد السريري</p>
+                        <ul class="text-xs text-slate-600 space-y-2 mb-4">
+                            <li class="flex items-start">
+                                <span class="ml-1.5 text-teal-500">•</span>
+                                <span>إعادة استهداف حصري لمشاهدي 50% فأكثر من المرحلة الأولى.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="ml-1.5 text-teal-500">•</span>
+                                <span>عرض محتوى الأمان، تفاصيل التخدير، ومدة التعافي والعودة للعمل.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="ml-1.5 text-teal-500">•</span>
+                                <span>تعزيز ثقة الجمهور وتحويل الاهتمام إلى نية علاجية جادة.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-50 p-3 rounded-lg border border-slate-100 text-xs">
+                        <span class="font-bold text-slate-700 block">الهدف الرقمي:</span>
+                        خفض تكلفة الاستفسار ومنع تسرب العملاء المحتملين.
+                    </div>
+                </div>
+
+                <!-- Step 3: BoFu -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 relative overflow-hidden flex flex-col justify-between">
+                    <div class="absolute -top-3 -left-3 bg-amber-500 text-white text-xs font-black px-4 py-2 rounded-br-xl shadow">
+                        الأيام 10 - 14
+                    </div>
+                    <div>
+                        <div class="flex items-center space-x-2 space-x-reverse mb-4 mt-2">
+                            <span class="bg-amber-100 text-amber-700 font-bold w-8 h-8 rounded-full flex items-center justify-center text-sm">3</span>
+                            <h3 class="font-bold text-lg text-slate-900">أسفل القمع (BoFu)</h3>
+                        </div>
+                        <p class="text-xs font-bold text-amber-600 mb-2">الحصاد التسويقي وتوليد الحجوزات</p>
+                        <ul class="text-xs text-slate-600 space-y-2 mb-4">
+                            <li class="flex items-start">
+                                <span class="ml-1.5 text-amber-500">•</span>
+                                <span>حملات تحويل مباشر لمراسلة واتساب ونماذج الحجز المؤهلة.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="ml-1.5 text-amber-500">•</span>
+                                <span>تضمين شريحة الجمهور المشابه (Lookalike 1%) لأعلى المتفاعلين.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="ml-1.5 text-amber-500">•</span>
+                                <span>تفعيل استجابة السكرتارية الفورية لحصد الكشوفات السريرية.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-50 p-3 rounded-lg border border-slate-100 text-xs">
+                        <span class="font-bold text-slate-700 block">الهدف الرقمي:</span>
+                        تحقيق أعلى معدل تحويل لكشوفات فعالية داخل العيادة.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Budget Scenarios & Expected KPI Forecasts -->
+        <section class="space-y-6">
+            <div class="border-r-4 border-amber-500 pr-3">
+                <h2 class="text-2xl font-bold text-slate-900">سيناريوهات الميزانية وتوقعات العائد الإعلاني</h2>
+                <p class="text-sm text-slate-600">مقارنة تحليلية شاملة بين الميزانية المتوسطة (60,000 ج.م) والميزانية المرتفعة (120,000 ج.م) لمدة أسبوعين.</p>
+            </div>
+
+            <!-- Introductory Paragraph for Chart Context -->
+            <div class="bg-white p-5 rounded-xl border border-slate-200 text-sm text-slate-700 leading-relaxed shadow-sm">
+                تظهر التحليلات المقارنة للأنصبة الإعلانية أن تخصيص 67%-70% لمنظومة ميتا يضمن استقرار المحادثات التحويلية وحصد الاستشارات المباشرة، في حين يضمن تخصيص 30%-33% لتيك توك التوسع السريع وخفض متوسط CPM الإجمالي. الرسوم البيانية التالية توضح التوزيع التكتيكي للميزانيات والمخرجات المتوقعة لكلا السيناريوهين.
+            </div>
+
+            <!-- Charts Grid: Budget Allocation & KPI Comparison -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                <!-- Chart 1: Budget Split (Doughnut) -->
+                <div class="lg:col-span-5 bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-base text-slate-900 mb-1">توزيع الميزانيات حسب المنصات</h3>
+                        <p class="text-xs text-slate-500 mb-4">تقسيم الميزانية بين ميتا وتيك توك في السيناريوين</p>
+                        <div class="chart-container">
+                            <canvas id="budgetSplitChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-100 text-xs text-slate-600 flex justify-between">
+                        <span>• ميتا: التركيز على تحويل واتساب</span>
+                        <span>• تيك توك: الانتشار وSpark Ads</span>
+                    </div>
+                </div>
+
+                <!-- Chart 2: KPI Outcomes Comparison (Grouped Bar) -->
+                <div class="lg:col-span-7 bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-base text-slate-900 mb-1">مقارنة النتائج المتوقعة ومؤشرات الأداء (KPIs)</h3>
+                        <p class="text-xs text-slate-500 mb-4">المقارنة بين سيناريو 60 ألف وسيناريو 120 ألف جنيه مصري</p>
+                        <div class="chart-container">
+                            <canvas id="kpiComparisonChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-100 text-xs text-slate-600 flex justify-between">
+                        <span>معدل تحويل السكرتارية المعتمد: 15% - 22%</span>
+                        <span class="font-bold text-blue-600">تكلفة المحادثة: 85 - 160 ج.م</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Platform Performance & Conversion Funnel Analytics -->
+        <section class="space-y-6">
+            <div class="border-r-4 border-blue-600 pr-3">
+                <h2 class="text-2xl font-bold text-slate-900">مقارنة المنصات ومعدلات انخفاض القمع (Funnel Drop-off)</h2>
+                <p class="text-sm text-slate-600">تحليل كفاءة تكلفة الظهور ومراحل تحول المريض من الانطباع الأول إلى الكشف السريري.</p>
+            </div>
+
+            <!-- Introductory Paragraph -->
+            <div class="bg-white p-5 rounded-xl border border-slate-200 text-sm text-slate-700 leading-relaxed shadow-sm">
+                يعكس المقاييس الطبية في مصر تفوق تيك توك في تكلفة الوصول المبكر (CPM منخفض) بينما تتميز ميتا بقدرتها الأعلى على الإغلاق المباشر وتوليد استفسارات جادة. تتبع البيانات أدناه مسار 1,000,000 ظهور أولي وكيفية تصفيتها حتى الوصول للعيادة.
+            </div>
+
+            <!-- Charts Grid: Platform Metrics & Funnel Drop-off -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                <!-- Chart 3: Platform Metrics Comparison -->
+                <div class="lg:col-span-6 bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                    <h3 class="font-bold text-base text-slate-900 mb-1">مقارنة تكلفة الوصول والاستحواذ بين المنصات</h3>
+                    <p class="text-xs text-slate-500 mb-4">تكلفة الألف ظهور (CPM) وتكلفة الرسالة (CPL) بالجنيه المصري</p>
+                    <div class="chart-container">
+                        <canvas id="platformMetricsChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Chart 4: Patient Journey Conversion Funnel -->
+                <div class="lg:col-span-6 bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                    <h3 class="font-bold text-base text-slate-900 mb-1">قمع تحويل المرضى (سيناريو الميزانية المتوسطة)</h3>
+                    <p class="text-xs text-slate-500 mb-4">التدرج العددي من الظهور الإعلاني حتى الكشف بالعيادة</p>
+                    <div class="chart-container">
+                        <canvas id="funnelDropoffChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: Creative Matrix & Ad Scripts -->
+        <section class="space-y-6">
+            <div class="border-r-4 border-rose-600 pr-3">
+                <h2 class="text-2xl font-bold text-slate-900">الزوايا الإبداعية والنصوص الإعلانية الموصى بها</h2>
+                <p class="text-sm text-slate-600">صياغات موجهة تخاطب دوافع المرضى، ترفع استبقاء المشاهدين، وتخفض تكاليف المزادات الإعلانية.</p>
+            </div>
+
+            <!-- Creative Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Angle 1 -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2.5 py-1 rounded">الزاوية الأولى: الرجال</span>
+                            <span class="text-xs font-bold text-slate-400">تخفيض تكلفة CTR</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">تفكيك خرافات التثدي</h3>
+                        <div class="bg-slate-50 p-3 rounded-lg border border-slate-200 text-xs mb-3 italic text-slate-700">
+                            "أكبر خطأ بيقع فيه الشباب في علاج التثدي.. الجيم مش هيدوب الغدة!"
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                            التركيز على التفريق العلمي بين السمنة الموضعية والتضخم الغدي الحقيقي مع شرح آلية الاستئصال الميكروسكوبي الدقيق بدون ندبات.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-slate-100 flex justify-between items-center text-xs">
+                        <span class="font-bold text-slate-500">الجمهور: رجال 18-45</span>
+                        <span class="font-bold text-blue-600">CTA: واتساب مباشر</span>
+                    </div>
+                </div>
+
+                <!-- Angle 2 -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-teal-100 text-teal-800 text-xs font-bold px-2.5 py-1 rounded">الزاوية الثانية: النساء/الكل</span>
+                            <span class="text-xs font-bold text-slate-400">بناء الثقة والأمان</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">أمان نحت القوام بالفيزر</h3>
+                        <div class="bg-slate-50 p-3 rounded-lg border border-slate-200 text-xs mb-3 italic text-slate-700">
+                            "ليه قرار نحت القوام محتاج جراح تجميل متخصص مش مجرد جهاز حديث؟"
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                            إبراز الاعتمادات الدولية (أيرلندا وقصر العيني) والتأكيد على أهمية الخبرة التشريحية لتفادي حروق الفيزر وتعرجات الجلد.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-slate-100 flex justify-between items-center text-xs">
+                        <span class="font-bold text-slate-500">الجمهور: سيدات ورجال</span>
+                        <span class="font-bold text-teal-600">CTA: استشارة عيادية</span>
+                    </div>
+                </div>
+
+                <!-- Angle 3 -->
+                <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-amber-100 text-amber-800 text-xs font-bold px-2.5 py-1 rounded">الزاوية الثالثة: التردد</span>
+                            <span class="text-xs font-bold text-slate-400">نزع الرهبة</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">فترة التعافي والعودة للعمل</h3>
+                        <div class="bg-slate-50 p-3 rounded-lg border border-slate-200 text-xs mb-3 italic text-slate-700">
+                            "هرجع لحياتي وشغلي الطبيعي بعد العملية بقد إيه؟"
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                            الإجابة الشفافة عن مدة ارتداء المشد الطبي، زوال التورم، وكيف تسرع تقنيات الشفط الحديثة الالتئام والعودة للأنشطة.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-slate-100 flex justify-between items-center text-xs">
+                        <span class="font-bold text-slate-500">الجمهور: المترددون MoFu</span>
+                        <span class="font-bold text-amber-600">CTA: تقييم حالة</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: Policy Compliance & Safety Controls -->
+        <section class="space-y-6">
+            <div class="border-r-4 border-slate-800 pr-3">
+                <h2 class="text-2xl font-bold text-slate-900">إدارة الامتثال وحماية الحسابات الإعلانية</h2>
+                <p class="text-sm text-slate-600">قواعد تنظيمية صارمة لمنع حظر الحسابات وضمان استمرارية الحملات التسويقية.</p>
+            </div>
+
+            <!-- Compliance Rules Matrix -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Allowed Best Practices -->
+                <div class="bg-white p-6 rounded-xl border border-emerald-200 bg-emerald-50/20 shadow-sm">
+                    <div class="flex items-center space-x-2 space-x-reverse mb-4">
+                        <span class="text-xl">✅</span>
+                        <h3 class="font-bold text-emerald-900 text-base">الممارسات المعتمدة والممتثلة</h3>
+                    </div>
+                    <ul class="space-y-3 text-xs text-slate-700">
+                        <li class="flex items-start">
+                            <span class="text-emerald-600 ml-2 font-bold">✓</span>
+                            <span><strong>التقييد العمري الإلزامي:</strong> تقييد الاستهداف حصرياً للبنية العمرية 18+ عاماً لجميع حملات التجميل.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-emerald-600 ml-2 font-bold">✓</span>
+                            <span><strong>الطرح التثقيفي المتزن:</strong> التركيز على الشرح العلمي والتقني بدلاً من الترويج المباشر أو الإحراج الجسدي.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-emerald-600 ml-2 font-bold">✓</span>
+                            <span><strong>استخدام تيك توك Spark Ads:</strong> ترويج المقاطع العضوية المباشرة من حساب الطبيب لرفع التفاعل بنسبة 142%.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-emerald-600 ml-2 font-bold">✓</span>
+                            <span><strong>كتالوجات الرسائل الخاصة:</strong> عرض صور ما قبل وبعد العملية فقط داخل المحادثات المباشرة على واتساب.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Prohibited Rules -->
+                <div class="bg-white p-6 rounded-xl border border-rose-200 bg-rose-50/20 shadow-sm">
+                    <div class="flex items-center space-x-2 space-x-reverse mb-4">
+                        <span class="text-xl">❌</span>
+                        <h3 class="font-bold text-rose-900 text-base">المحظورات وتجنب تعليق الحسابات</h3>
+                    </div>
+                    <ul class="space-y-3 text-xs text-slate-700">
+                        <li class="flex items-start">
+                            <span class="text-rose-600 ml-2 font-bold">✗</span>
+                            <span><strong>الصورة الذاتية السلبية:</strong> يمنع قاطعاً طرح أسئلة تحرج المتلقي بشأن الترهلات أو عيوب المظهر الجسدي.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-rose-600 ml-2 font-bold">✗</span>
+                            <span><strong>صور قبل وبعد الإعلانية:</strong> استبعاد المقارنات المباشرة من الإعلانات الممولة لمنع الحظر الآلي للذكاء الاصطناعي.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-rose-600 ml-2 font-bold">✗</span>
+                            <span><strong>توجيه الزيارات للحساب المعلق:</strong> تجنب وضع روابط إنستغرام في الإعلانات لحين قبول الطعن واستعادة الحساب.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-rose-600 ml-2 font-bold">✗</span>
+                            <span><strong>الوعود الطبية المبالغ فيها:</strong> تجنب ادعاء نتائج فورية بنسبة 100% دون الإشارة إلى اختلاف الحالات السريرية.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: Executive Recommendations -->
+        <section class="bg-slate-900 text-white rounded-2xl p-6 sm:p-8 shadow-xl space-y-4">
+            <div class="flex items-center space-x-3 space-x-reverse">
+                <span class="text-3xl">🚀</span>
+                <h2 class="text-xl sm:text-2xl font-bold">التوصيات التنفيذية لخبير الميديا باير</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-slate-300">
+                <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700">
+                    <h4 class="font-bold text-amber-400 text-sm mb-2">1. سرعة الاستجابة (Speed to Lead)</h4>
+                    <p class="leading-relaxed">
+                        تأخير الرد على رسائل واتساب لأكثر من 15 دقيقة يفقد الحملة أكثر من 50% من قيمتها التحويلية. يجب تدريب فريق السكرتارية على الفرز السريع والتأكيد المباشر.
+                    </p>
+                </div>
+                <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700">
+                    <h4 class="font-bold text-teal-400 text-sm mb-2">2. تدوير المحتوى المجهد</h4>
+                    <p class="leading-relaxed">
+                        عند ارتفاع مقياس التكرار (Frequency) لأكثر من 3.2، يجب إيقاف المجموعة الإعلانية وتدوير النصوص والفيديوهات لتفادي تشبع الجمهور وارتفاع تكلفة CPM.
+                    </p>
+                </div>
+                <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700">
+                    <h4 class="font-bold text-blue-400 text-sm mb-2">3. اعتماد Spark Ads الافتراضي</h4>
+                    <p class="leading-relaxed">
+                        على منصة تيك توك، تعزيز المقاطع العضوية المنشورة على حساب الطبيب يحقق تفاعلاً أعلى بنسبة 142% مقارنة بالصيغ الإعلانية المجهولة، ويبني قاعدة متابعين دائمة.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-500 py-6 border-t border-slate-800 text-center text-xs">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>خطة الميديا باير والتموضع الإعلاني - د. عبدالله الجندي © 2026. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <!-- Chart.js Logic Script -->
+    <script>
+        // Label Wrapping Logic (>16 chars)
+        function wrapLabel(str, maxLen = 16) {
+            if (typeof str !== 'string') return str;
+            if (str.length <= maxLen) return str;
+            const words = str.split(' ');
+            const lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + ' ' + word).trim().length > maxLen) {
+                    if (currentLine) lines.push(currentLine.trim());
+                    currentLine = word;
+                } else {
+                    currentLine += (currentLine ? ' ' : '') + word;
+                }
+            });
+            if (currentLine) lines.push(currentLine.trim());
+            return lines;
+        }
+
+        // Shared Tooltip Callback Logic
+        const sharedTooltipConfig = {
+            callbacks: {
+                title: function(tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    if (Array.isArray(label)) {
+                        return label.join(' ');
+                    } else {
+                        return label;
+                    }
+                }
+            }
+        };
+
+        // Initialize Charts on DOM Load
+        document.addEventListener('DOMContentLoaded', function() {
+
+            // Chart 1: Budget Split (Doughnut)
+            const ctx1 = document.getElementById('budgetSplitChart').getContext('2d');
+            const labels1 = [
+                'ميتا - ميزانية متوسطة (42k)',
+                'تيك توك - ميزانية متوسطة (18k)',
+                'ميتا - ميزانية مرتفعة (80k)',
+                'تيك توك - ميزانية مرتفعة (40k)'
+            ].map(l => wrapLabel(l));
+
+            new Chart(ctx1, {
+                type: 'doughnut',
+                data: {
+                    labels: labels1,
+                    datasets: [{
+                        data: [42000, 18000, 80000, 40000],
+                        backgroundColor: ['#2563eb', '#60a5fa', '#0d9488', '#2dd4bf'],
+                        borderWidth: 2,
+                        borderColor: '#ffffff'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                font: { family: 'Cairo', size: 10 },
+                                boxWidth: 12
+                            }
+                        },
+                        tooltip: sharedTooltipConfig
+                    }
+                }
+            });
+
+            // Chart 2: KPI Outcomes Comparison (Grouped Bar)
+            const ctx2 = document.getElementById('kpiComparisonChart').getContext('2d');
+            const labels2 = [
+                'الظهور بالآلاف (k)',
+                'مشاهدات الفيديو 3ث (k)',
+                'النقرات النوعية (x10)',
+                'محادثات واتساب',
+                'الكشوفات المؤكدة'
+            ].map(l => wrapLabel(l));
+
+            new Chart(ctx2, {
+                type: 'bar',
+                data: {
+                    labels: labels2,
+                    datasets: [
+                        {
+                            label: 'الميزانية المتوسطة (60k ج.م)',
+                            data: [1000, 540, 1400, 330, 58],
+                            backgroundColor: '#2563eb',
+                            borderRadius: 6
+                        },
+                        {
+                            label: 'الميزانية المرتفعة (120k ج.م)',
+                            data: [2075, 1165, 2925, 695, 132],
+                            backgroundColor: '#0d9488',
+                            borderRadius: 6
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: '#f1f5f9' },
+                            ticks: { font: { family: 'Cairo', size: 10 } }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { font: { family: 'Cairo', size: 10 } }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            labels: { font: { family: 'Cairo', size: 11 } }
+                        },
+                        tooltip: sharedTooltipConfig
+                    }
+                }
+            });
+
+            // Chart 3: Platform Metrics Comparison (Horizontal Bar)
+            const ctx3 = document.getElementById('platformMetricsChart').getContext('2d');
+            const labels3 = [
+                'متوسط CPM (جنيه)',
+                'تكلفة محادثة واتساب CPL (جنيه)',
+                'تكلفة مشاهدة الفيديو 3s (قرش)'
+            ].map(l => wrapLabel(l));
+
+            new Chart(ctx3, {
+                type: 'bar',
+                data: {
+                    labels: labels3,
+                    datasets: [
+                        {
+                            label: 'منظومة Meta',
+                            data: [67.5, 122.5, 6.5],
+                            backgroundColor: '#1e40af',
+                            borderRadius: 4
+                        },
+                        {
+                            label: 'منظومة TikTok',
+                            data: [38.0, 180.0, 3.2],
+                            backgroundColor: '#e11d48',
+                            borderRadius: 4
+                        }
+                    ]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            grid: { color: '#f1f5f9' },
+                            ticks: { font: { family: 'Cairo', size: 10 } }
+                        },
+                        y: {
+                            grid: { display: false },
+                            ticks: { font: { family: 'Cairo', size: 10 } }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            labels: { font: { family: 'Cairo', size: 11 } }
+                        },
+                        tooltip: sharedTooltipConfig
+                    }
+                }
+            });
+
+            // Chart 4: Funnel Dropoff Chart
+            const ctx4 = document.getElementById('funnelDropoffChart').getContext('2d');
+            const labels4 = [
+                '1. إجمالي الظهور',
+                '2. مشاهدات +50%',
+                '3. نقرات الرابط',
+                '4. محادثات واتساب',
+                '5. كشوفات العيادة'
+            ].map(l => wrapLabel(l));
+
+            new Chart(ctx4, {
+                type: 'bar',
+                data: {
+                    labels: labels4,
+                    datasets: [{
+                        label: 'عدد المستخدمين في المرحلة',
+                        data: [1000000, 540000, 14000, 330, 58],
+                        backgroundColor: ['#0f172a', '#1e40af', '#2563eb', '#0d9488', '#f59e0b'],
+                        borderRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            type: 'logarithmic',
+                            beginAtZero: false,
+                            grid: { color: '#f1f5f9' },
+                            ticks: { font: { family: 'Cairo', size: 9 } }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { font: { family: 'Cairo', size: 10 } }
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: sharedTooltipConfig
+                    }
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>
